@@ -1,0 +1,39 @@
+ NOTES FOR GITHUB:
+
+
+ Github Repo Format:
+
+ master (origin)
+ 	|
+ 	+--- feature_1::initials
+ 	|
+ 	+--- feature_2::initials
+ 	.
+ 	.
+ 	.
+ 	+--- feature_3::initials
+
+
+ IMPORTANT:
+ 	1. Make a new branch for feature you are working on and name it <feature_name>::<your_initials>
+ 		- Start off with a working code base connected to DB and delpoyed on master branch
+ 		- Don't work on files in the initial master branch but modularize and build features in seperate files (makes merging easier)
+
+ 	2. Make sure you are working on the right branch
+ 		- To see which brank you are on 				: git status
+ 		- To switch to another branch 					: git checkout <branch_name>
+ 		- To add a new branch 							: git branch <new_branch_name>
+ 		- Shorthand to add a branch and switch to it 	: git checkout -n <new_branch_name>
+
+ 	3. Try not to make any branches off the feature branches just so we can keep it simple
+
+ 	4. If you want your own copy of the repo (for personal/testing/etc use) make a personal copy of it by following these steps
+ 		- Clone the repository and enter directory				: git clone <repo_url> && cd ./<repo_name>
+ 		- Make a new repo w/ same <repo_name> on your account	
+ 		- Add a remote connection to your account				: git remote add personal <link_to__new_repo_on_your_account>
+ 		- Push to master on your account 						: git push personal   (personal is the name of your remote repo)
+ 		- Done. Should work like normal.
+ 		- If you want to add a certain branch on your repo		: git checkout <branch_name> 
+ 																: git add .
+ 																: git commit -m 'adding <branch_name> to personal'
+ 																: git push personal <branch_name>
