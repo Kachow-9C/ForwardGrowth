@@ -1,7 +1,11 @@
  NOTES FOR GITHUB:
 
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+GITHUB REPO FORMAT
 
- Github Repo Format:
+This is the format we will keep our repo in. Please don't deviate from the overall design and naming conventions for branches we have set. It will make the process a lot
+smoother.
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
  master (origin)
  	|
@@ -14,26 +18,54 @@
  	+--- feature_3::initials
 
 
- IMPORTANT:
- 	1. Make a new branch for feature you are working on and name it <feature_name>::<your_initials>
- 		- Start off with a working code base connected to DB and delpoyed on master branch
- 		- Don't work on files in the initial master branch but modularize and build features in seperate files (makes merging easier)
 
- 	2. Make sure you are working on the right branch
- 		- To see which brank you are on 				: git status
- 		- To switch to another branch 					: git checkout <branch_name>
- 		- To add a new branch 							: git branch <new_branch_name>
- 		- Shorthand to add a branch and switch to it 	: git checkout -n <new_branch_name>
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+WORKFLOW 
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+1. Decide which feature you are working on
+2. Make a branch off of the MASTER branch and name it <feature_name>::<your_initials>		: git branch <feature_name>::<your_initials>
+3. Check out your branch  									: git checkout <feature_name>::<your_initials>
+4. Make sure you are on the right branch							: git branch (see green highlighted)
+5. Implement your feature. Try to commit and push your changes to your branch every day.        : git add . && git commit -m "<message>_<date>" && git push origin <branch_name>
+   so you don't lose your progress and get backtracked.
+6. Once your feature is fully implemented make sure it funs without fail locally. Then 
+   make your final push up to the feature branch. (Do not push up broken or buggy code please)
+7. Switch to the master branch and pull the latest version of the branch 			: git checkout master && git pull
+8. Merge your branch										: git merge <branch_name>
+9. Test the code you have in your local master branch. If everything works then commit and      : git add . && git commit -m '<message>_<date>' && git push origin master
+   push your changed up to the master branch
+10.If you have merge conflicts message me and I will take care of them.
+11.Repeat for the next feature
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
- 	3. Try not to make any branches off the feature branches just so we can keep it simple
 
- 	4. If you want your own copy of the repo (for personal/testing/etc use) make a personal copy of it by following these steps
- 		- Clone the repository and enter directory				: git clone <repo_url> && cd ./<repo_name>
- 		- Make a new repo w/ same <repo_name> on your account	
- 		- Add a remote connection to your account				: git remote add personal <link_to__new_repo_on_your_account>
- 		- Push to master on your account 						: git push personal   (personal is the name of your remote repo)
- 		- Done. Should work like normal.
- 		- If you want to add a certain branch on your repo		: git checkout <branch_name> 
- 																: git add .
- 																: git commit -m 'adding <branch_name> to personal'
- 																: git push personal <branch_name>
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+IMPORTANT NOTES AND TIPS
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+ 1. Make a new branch for feature you are working on and name it <feature_name>::<your_initials>. 
+ 	- Start off with a working code base connected to DB and deployed on master branch
+ 	- Don't work on files in the initial master branch but modularize and build features in separate files (makes merging easier)
+	- Once you are finished implementing your feature, test in on your local machine and merge it into the master branch
+		- NOTE : You have to switch to the master branch, do a git pull, and then merge with your feature branch. 
+
+2. Make sure you are working on the right branch
+	- To see which branch you are on 				: git status (or git branch)
+	- To switch to another branch 					: git checkout <branch_name>
+	- To add a new branch 						: git branch <new_branch_name>
+	- Shorthand to add a branch and switch to it 			: git checkout -n <new_branch_name>
+
+3. Try not to make any branches off of the feature branches just so we can keep it simple. Our project isn't too complicated so it's not needed either
+
+4. If you want your own copy of the repo (for personal/testing/etc use) make a personal copy of it by following these steps
+	- Clone the repository and enter directory			: git clone <repo_url> && cd ./<repo_name>
+	- Make a new repo w/ same <repo_name> on your account	
+	- Add a remote connection to your account			: git remote add personal <link_to__new_repo_on_your_account>
+	- Push to master on your account 				: git push personal   (personal is the name of your remote repo)
+	- Done. Should work like normal.
+	- If you want to add a certain branch on your repo		: git checkout <branch_name> 
+									: git add .
+									: git commit -m 'adding <branch_name> to personal'
+									: git push personal <branch_name>
