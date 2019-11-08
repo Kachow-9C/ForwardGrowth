@@ -31,5 +31,6 @@
     "supertest": "^4.0.2",
     "mocha": "^6.2.1"
   },
-  "homepage": "https://github.com/UFWebApps/React_Template_Repo#readme"
+  "homepage": "https://github.com/UFWebApps/React_Template_Repo#readme",
+  "proxy": "http://localhost:8000"
 }
