@@ -1,7 +1,7 @@
 import app from 'firebase/app';
 import 'firebase/auth';
 
-var rawConfig = require('../../config/config');
+var rawConfig = require('../../config');
 
 const config = {
     apiKey: rawConfig.firebase.REACT_APP_API_KEY,
