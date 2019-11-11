@@ -1,5 +1,4 @@
 server/config/config.js
 /node_modules
 /client/node_modules
-client/src/components/Firebase/firebase.js
-
+/client/src/config.js
