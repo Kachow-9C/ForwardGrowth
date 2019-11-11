@@ -85,7 +85,7 @@ class SignInFormBase extends Component {
                             </div>
                             <div className = "FormField"></div>
                                 <button className = "FormField__Button mr-20" disabled={isInvalid} type="submit">
-                                    Sign In
+                                    Sign In!
                                 </button>
                             {error && <p>{error.message}</p>}
                         </form>
