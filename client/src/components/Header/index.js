@@ -1,10 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './Header.css';
+import logo from '../../assets/backpackLogo.png';
 
 const Header = () => (
     <div>
-        <h1>This is a Header</h1>
+        <header>Backpack Adventures</header>
     </div>
 );
 export default Header;
