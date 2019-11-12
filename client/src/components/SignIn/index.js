@@ -49,9 +49,6 @@ class SignInFormBase extends Component {
             <div className = "App">
                 <div className = "App__Aside"></div>
                 <div className = "App__Form">
-                    <div className="PageSwitcher">
-                        <a href = "#" className = "PageSwitcher__Item PageSwitcher__Item--Active">Sign In</a>
-                    </div>
 
                     <div className="FormTitle">
                         <a href = "#" className= "FormTitle__Link"> Sign In</a>
