@@ -9,19 +9,21 @@ var mongoose = require('mongoose'),
 var changeLogSchema = new Schema({
     //Check out - https://mongoosejs.com/docs/guide.html
     created_at: {
-        type: Date,
+        type: String,
         required: true,
     },
     author: {
         type: String,
         required: true,
     },
+    title: {
+        type: String,
+        reuired: true
+    },
     content: {
         type: String,
         required: true,
-    },
-    updated_at: Date
-
+    }
 });
 
 /* Create a 'pre' function that adds the updated_at (and created_at if not already there) property

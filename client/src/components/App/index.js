@@ -11,6 +11,7 @@ import AdminPage from '../Admin';
 import * as ROUTES from '../../constants/routes';
 import { withAuthentication } from '../Session';
 import Contact from '../Contact';
+import Newsletter from '../Newsletter'
 const App = () => (
     <Router>
         <div>
@@ -27,6 +28,7 @@ const App = () => (
             <Route path={ROUTES.ACCOUNT} component={AccountPage} />
             <Route path={ROUTES.ADMIN} component={AdminPage} />
             <Route path={ROUTES.CONTACT} component={Contact}/>
+            <Route path={ROUTES.NEWSLETTER} component={Newsletter}/>
         </div>
     </Router>
 );
