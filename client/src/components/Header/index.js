@@ -5,7 +5,7 @@ import logo from '../../assets/backpackLogo.png';
 
 const Header = () => (
     <div>
-        <header>Backpack Adventures</header>
+        <header><img src={logo} alt="Logo"></img>Backpack Adventures</header>
     </div>
 );
 export default Header;
