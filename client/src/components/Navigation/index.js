@@ -19,7 +19,7 @@ const NavigationAuth = () => (
     <div style={{textAlign: 'center'}}>
 
             <Link to={ROUTES.LANDING}>Landing</Link> |
-            <Link to={ROUTES.HOME}>Home</Link> |
+            <Link to={ROUTES.NEWSLETTER}>Newsletter</Link> |
             <Link to={ROUTES.ACCOUNT}>Account</Link> |
             <Link to={ROUTES.CONTACT}> Contact </Link> |
             <SignOutButton />
@@ -30,7 +30,7 @@ const NavigationNonAuth = () => (
             <Link to={ROUTES.LANDING}>Landing</Link> |
             <Link to={ROUTES.CONTACT}> Contact </Link> |
             <Link to={ROUTES.NEWSLETTER}>Newsletter</Link> |
-            <Link to={ROUTES.SIGN_IN}>Sign In</Link> | 
+            <Link to={ROUTES.SIGN_IN}>Sign In</Link>
             
 
 
