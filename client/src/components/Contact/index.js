@@ -48,7 +48,7 @@ function Contact() {
                         <Form.Control as ="textarea" rows="3" />
                       </Row>
                     </Form>
-                      <Button variant="info" size="lg" block>
+                      <Button variant="info" style={{backgroundColor: '#5BD5C0', color: '#293A4E'}}size="lg" block>
                         Sumbit
                       </Button>
                 </Container>
