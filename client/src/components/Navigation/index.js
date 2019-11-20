@@ -29,9 +29,7 @@ const NavigationNonAuth = () => (
    <div style={{textAlign: 'center'}}>
             <Link to={ROUTES.HOME}>Home</Link> |
             <Link to={ROUTES.CONTACT}> Contact </Link> |
-            <Link to={ROUTES.NEWSLETTER}>Newsletter</Link> |
-            <Link to={ROUTES.SIGN_IN}>Sign In</Link>
-            
+            <Link to={ROUTES.NEWSLETTER}>Newsletter</Link>
 
 
     </div>
