@@ -3,3 +3,5 @@ server/config/config.js
 /client/node_modules
 /client/src/config.js
 /.idea
+/client/build/
+/functions/
