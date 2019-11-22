@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class FormFile extends Component {
     constructor() {
         super();
-        this.state = { newsletters: [] }
+        this.state = { title: '', content: ''};
     }
 
     addNews() {
