@@ -1,4 +1,9 @@
 /node_modules
 /client/node_modules
+<<<<<<< HEAD
 client/src/components/Firebase/firebase.js
 /.vscode
+=======
+/client/src/config.js
+/.idea
+>>>>>>> 65e9b5c0313459b9bb315da145543e413c71a8a0

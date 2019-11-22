@@ -10,9 +10,9 @@ const App = () => {
     <div>
       <Header />
       <Switch>
-        <Route exact path="/Home" component={Home} />
+        <Route exact path="/" component={Home} />
         <Route exact path="/">
-          <Redirect to="/Home" />
+          <Redirect to="/" />
         </Route>
         <Route component={NotFound}/>
       </Switch>

@@ -6,9 +6,7 @@ import './SignIn.css';
 
 function SignIn() {
     return (
-        <div className = "App">
-            <div className = "App__Aside"></div>
-            <div className = "App__Form">
+
                 <div className="PageSwitcher">
                     <a href = "#" className = "PageSwitcher__Item PageSwitcher__Item--Active">Sign In</a>
                 </div>
@@ -34,8 +32,8 @@ function SignIn() {
                     </form>
                 </div>
 
-
-            </div>
+            
+            // </div>
         </div>
     );
 }
