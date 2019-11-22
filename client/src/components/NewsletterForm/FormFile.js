@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class FormFile extends Component {
     constructor() {
         super();
-        this.state = { title: '', content: ''};
+        this.state = { title: '', content: '' };
     }
 
     addNews() {
@@ -27,7 +27,7 @@ class FormFile extends Component {
                     Content:
                     <input type="text" placeholder="Enter Content" ref={(content) => this.content = content} />
                 </label>
-                <input className="Button" type="button" value="Add News" onClick={this.addNews.bind(this)}/>
+                <input className="Button" type="button" value="Add News" onClick={this.addNews.bind(this)} />
             </form>
         );
     }
