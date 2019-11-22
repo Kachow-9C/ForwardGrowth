@@ -1,10 +1,31 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import * as ROUTES from "../../constants/routes";
+import {AuthUserContext} from "../Session";
+
 
 const Footer = () => (
+    <div>
+        <AuthUserContext.Consumer>
+            {authUser =>
+                authUser ? <FooterAuth /> : <FooterNonAuth />
+            }
+        </AuthUserContext.Consumer>
+    </div>
+);
+
+const FooterNonAuth = () => (
     <div style={{color: 'white', textAlign: 'center'}}>
-        Copyright Kachow! Development Team | <Link to={ROUTES.SIGN_IN}>Sign In</Link>
+        <br></br>
+        Copyright 2019 Forward Growth | Are you a team member? <Link to={ROUTES.SIGN_IN}>Sign In Here</Link>
+
+    </div>
+);
+
+const FooterAuth = () => (
+    <div style={{color: 'white', textAlign: 'center'}}>
+        <br></br>
+        Copyright 2019 Forward Growth
 
     </div>
 );
