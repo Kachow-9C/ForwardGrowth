@@ -2,3 +2,8 @@
 /client/node_modules
 /client/src/config.js
 /.idea
+<<<<<<< HEAD
+=======
+/client/build/
+/functions/
+>>>>>>> 1f480d9f5b7837f37ca6302e81f300e45fb82b18
