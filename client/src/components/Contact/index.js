@@ -10,7 +10,7 @@ function Contact() {
             <div className="App">
               <div className = "App__Form__Full">
         
-                <h2 className = "FormTitleContact"> Meet the Team </h2>
+                <h2 className = "FormTitleContact"> {process.env.MONGO_URI} </h2>
         
                 <Container>
                   <Row className = "FormRow" >
