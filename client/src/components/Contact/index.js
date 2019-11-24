@@ -26,9 +26,9 @@ import Quanisha from '../Contact/quanisha.png';
         }
         emailjs.send(
           'gmail',
-          'template_78l3DL6t',
+          '<TEMPLATE ID>',
           templateParams,
-          'user_cTiJAySIfLMZmueqFFH7w'
+          '<USER ID>'
         )
         this.resetForm()
     }
