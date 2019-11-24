@@ -20,7 +20,7 @@ import Quanisha from '../Contact/quanisha.png';
         const { name, email, subject, message } = this.state
         let templateParams = {
           from_name: email,
-          to_name: 'Qunisha',
+          to_name: 'Quanisha',
           subject: subject,
           message_html: message,
         }
