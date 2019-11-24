@@ -4,3 +4,4 @@ server/config/config.js
 /client/src/config.js
 /.idea
 /client/build/
+/functions/
