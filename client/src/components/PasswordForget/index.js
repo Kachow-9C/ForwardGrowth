@@ -3,6 +3,9 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { withFirebase } from '../Firebase';
 import * as ROUTES from '../../constants/routes';
+import Form from 'react-bootstrap/Form';
+import Button from 'react-bootstrap/Button';
+import Container from 'react-bootstrap/Container'
 const PasswordForgetPage = () => (
     <div>
         <h1>PasswordForget</h1>
@@ -37,20 +40,24 @@ class PasswordForgetFormBase extends Component {
         const { email, error } = this.state;
         const isInvalid = email === '';
         return (
-
-            <form onSubmit={this.onSubmit}>
-                <input
+            <Container>
+            <h3 style={{color:'#fff'}}> Forgot Password </h3>
+            <Form onSubmit={this.onSubmit}>
+                <Form.Group>
+                <Form.Label style={{color:'#FFF'}}>Email Address</Form.Label>
+                <Form.Control
                     name="email"
                     value={this.state.email}
                     onChange={this.onChange}
                     type="text"
-                    placeholder="Email Address"
                 />
-                <button disabled={isInvalid} type="submit">
-                    Reset My Password
-                </button>
+                </Form.Group>
+                <Button variant='info'  style={{backgroundColor: '#5BD5C0', color: '#293A4E'}} size="lg" type="submit">
+                        Reset My Password
+                    </Button>
                 {error && <p>{error.message}</p>}
-            </form>
+            </Form>
+            </Container>
             
         );
     }
