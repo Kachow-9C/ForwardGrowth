@@ -1,7 +1,27 @@
 import React from 'react';
-const Admin = () => (
-    <div>
-        <h1>Admin</h1>
-    </div>
+import { PasswordForgetForm } from '../PasswordForget';
+import PasswordChangeForm from '../PasswordChange';
+import { AuthUserContext, withAuthorization } from '../Session';
+import FormFile from '../NewsPost/FormFile.js';
+import Container from 'react-bootstrap/Container'
+
+const AdminPage = () => (
+    <AuthUserContext.Consumer>
+        {authUser => (
+            <div>
+                <h2 className = "FormTitleContact"> Administrator Console</h2>
+                <Container>
+                    <h3 className='text-center' style={{color:'#fff'}}> Welcome: {authUser.email} </h3>
+                </Container><br/><br/><br/><br/>
+                <PasswordForgetForm /><br/><br/><br/><br/>
+                <PasswordChangeForm /><br/><br/><br/><br/>
+                <FormFile/>
+            </div>
+
+        )}
+    </AuthUserContext.Consumer>
+
+
 );
-export default Admin;
+const condition = authUser => !!authUser;
+export default withAuthorization(condition)(AdminPage);
