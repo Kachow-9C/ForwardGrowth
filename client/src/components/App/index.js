@@ -14,6 +14,7 @@ import { withAuthentication } from '../Session';
 import Contact from '../Contact';
 import Newsletter from '../Newsletter'
 import Footer from "../Footer";
+import NewsPost from "../NewsPost"
 const App = () => (
     <Router>
         <div>
@@ -31,6 +32,7 @@ const App = () => (
             <Route path={ROUTES.ADMIN} component={AdminPage} />
             <Route path={ROUTES.CONTACT} component={Contact}/>
             <Route path={ROUTES.NEWSLETTER} component={Newsletter}/>
+            <Route path={ROUTES.NEWSPOST} component={NewsPost}/>
             <Footer />
 
         </div>

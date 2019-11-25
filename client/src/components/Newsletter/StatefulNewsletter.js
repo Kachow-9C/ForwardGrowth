@@ -32,6 +32,10 @@ class StatefulNewsletter extends Component{
                                 <Card.Text>
                                     {newsletter.content}
                                 </Card.Text>
+                                <Card.Text className='text-left'>
+                                From: {newsletter.author}<br/>      
+                                <i>Date: {newsletter.created_at}</i>
+                                </Card.Text>
                             </Card.Body>
                         </Card>
                     </div> 
