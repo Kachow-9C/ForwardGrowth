@@ -39,6 +39,7 @@ class CreatePost extends Component {
     render(){
         return(
             <Container>
+            <h2 className = "FormTitleContact"> Create a New Post </h2>
             <div class='form-wrapper'>
                 <Form onSubmit={this.onSubmit}>
                     <Form.Group controlId="Title">
