@@ -8,7 +8,7 @@ import {AuthUserContext, withAuthorization} from "../Session";
 
 const SignUpPage = () => (
     <div>
-        <h1>SignUp</h1>
+        <h2 className = "FormTitleContact">Register New User</h2>
         <SignUpForm />
 
     </div>
@@ -69,6 +69,7 @@ class SignUpFormBase extends Component {
                             type="text"
                             placeholder="Full Name"
                         />
+                        <p></p>
                         <input
                             name="email"
                             value={email}
@@ -76,6 +77,7 @@ class SignUpFormBase extends Component {
                             type="text"
                             placeholder="Email Address"
                         />
+                        <p></p>
                         <input
                             name="passwordOne"
                             value={passwordOne}
@@ -83,6 +85,7 @@ class SignUpFormBase extends Component {
                             type="password"
                             placeholder="Password"
                         />
+                        <p></p>
                         <input
                             name="passwordTwo"
                             value={passwordTwo}
@@ -90,8 +93,9 @@ class SignUpFormBase extends Component {
                             type="password"
                             placeholder="Confirm Password"
                         />
+                        <p></p>
                         <button disabled={isInvalid} type="submit">
-                            Sign Up
+                            Create New User
                         </button>
                         {error && <p>{error.message}</p>}
                     </form>

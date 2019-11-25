@@ -17,7 +17,7 @@ const AdminPage = () => (
                 </Container><br/><br/><br/><br/>
                 <PasswordChangeForm /><br/>
                 <Container>
-                    <h3 className='text-center' style={{color:'#fff'}}>Want to add another team member? <Link to={ROUTES.SIGN_UP}>Create a New Account</Link></h3>
+                    <h5 className='text-center' style={{color:'#fff'}}>Want to add another team member? <Link to={ROUTES.SIGN_UP}>Create a New Account</Link></h5>
                 </Container>
                 <br/><br/><br/>
 
