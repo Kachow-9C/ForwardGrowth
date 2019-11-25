@@ -1,5 +1,9 @@
 import React, { Component } from 'react';
 import { withFirebase } from '../Firebase';
+import Form from 'react-bootstrap/Form';
+import Button from 'react-bootstrap/Button';
+import Container from 'react-bootstrap/Container'
+
 const INITIAL_STATE = {
     passwordOne: '',
     passwordTwo: '',
@@ -30,26 +34,35 @@ class PasswordChangeForm extends Component {
         const isInvalid =
             passwordOne !== passwordTwo || passwordOne === '';
         return (
-            <form onSubmit={this.onSubmit}>
-                <input
+            
+            <Container>
+            <h3 style={{color:'#fff'}}> Change Password </h3>
+            <Form onSubmit={this.onSubmit}>
+                <Form.Group>
+                <Form.Label style={{color:'#FFF'}}>New Password</Form.Label>
+                <Form.Control
                     name="passwordOne"
                     value={passwordOne}
                     onChange={this.onChange}
                     type="password"
-                    placeholder="New Password"
                 />
-                <input
+                </Form.Group>
+                <Form.Group>
+                <Form.Label style={{color:'#FFF'}}>Confirm New Password</Form.Label>
+                <Form.Control
                     name="passwordTwo"
                     value={passwordTwo}
                     onChange={this.onChange}
                     type="password"
-                    placeholder="Confirm New Password"
                 />
-                <button disabled={isInvalid} type="submit">
-                    Reset My Password
-                </button>
+                </Form.Group>
+                <Button variant='info'  style={{backgroundColor: '#5BD5C0', color: '#293A4E'}} size="lg" type="submit">
+                        Reset My Password
+                    </Button>
                 {error && <p>{error.message}</p>}
-            </form>
+            
+            </Form>
+            </Container>
         );
     }
 }
