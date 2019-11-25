@@ -20,9 +20,8 @@ const NavigationAuth = () => (
 
             <Link to={ROUTES.HOME}>Home</Link> |
             <Link to={ROUTES.NEWSLETTER}>Newsletter</Link> |
-            <Link to={ROUTES.ACCOUNT}>Account</Link> |
+            <Link to={ROUTES.ADMIN}>Admin Console</Link> |
             <Link to={ROUTES.CONTACT}> Contact </Link> |
-            <Link to={ROUTES.NEWSPOST}> New Post </Link> |
             <SignOutButton />
     </div>
 );

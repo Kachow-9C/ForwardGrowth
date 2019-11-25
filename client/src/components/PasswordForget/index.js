@@ -8,7 +8,6 @@ import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container'
 const PasswordForgetPage = () => (
     <div>
-        <h1>PasswordForget</h1>
         <PasswordForgetForm />
     </div>
 );
