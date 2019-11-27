@@ -16,6 +16,7 @@ class StatefulNewsletter extends Component{
         .then(newsletters => {
             newsletters = newsletters.reverse()
             this.setState({ newsletters })
+            
         })
     }
 
