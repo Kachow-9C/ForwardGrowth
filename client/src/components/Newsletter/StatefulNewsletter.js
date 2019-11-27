@@ -14,11 +14,13 @@ class StatefulNewsletter extends Component{
         fetch('/api/newsletters')
         .then(res => {return res.json()})
         .then(newsletters => {
+            newsletters = newsletters.reverse()
             this.setState({ newsletters })
         })
     }
 
     render(){
+        
         return(
             <div className="App">
               <div className = "App__Form__Full">
@@ -31,6 +33,10 @@ class StatefulNewsletter extends Component{
                                 <Card.Title>{newsletter.title}</Card.Title>
                                 <Card.Text>
                                     {newsletter.content}
+                                </Card.Text>
+                                <Card.Text className='text-left'>
+                                From: {newsletter.author}<br/>      
+                                <i>Date: {newsletter.created_at}</i>
                                 </Card.Text>
                             </Card.Body>
                         </Card>

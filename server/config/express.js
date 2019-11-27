@@ -5,6 +5,7 @@ const path = require('path'),
     bodyParser = require('body-parser'),
     exampleRouter = require('../routes/examples.server.routes'),
     newsletterRouter = require('../routes/newsletter.server.routes');
+    newsletters = require('../controllers/newsletter.server.controller.js')
 
 module.exports.init = () => {
     /* 
@@ -27,7 +28,9 @@ module.exports.init = () => {
     app.use(bodyParser.json());
 
     // add a router
-    app.use('/api/newsletters', newsletterRouter);
+    app.get('/api/newsletters', newsletters.list);
+
+    app.post('/api/newsletters/new', newsletters.create);
 
     if (process.env.NODE_ENV === 'production') {
         // Serve any static files

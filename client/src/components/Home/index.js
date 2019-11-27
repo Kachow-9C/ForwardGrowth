@@ -7,8 +7,10 @@ import app_preview2 from '../../assets/screenshots/app-preview2.jpg';
 import app_preview3 from '../../assets/screenshots/app-preview3.jpg';
 import app_preview4 from '../../assets/screenshots/app-preview4.jpg';
 import app_preview5 from '../../assets/screenshots/app-preview5.jpg';
-import app_store_availability_sign from '../../assets/app-store-availability-sign.jpg';
+import app_store_badge from '../../assets/app-store-badge.png';
+import google_play_badge from '../../assets/google-play-badge.png'
 import './index.css';
+
 
 const Home = () => (
     <React.Fragment>
@@ -50,9 +52,13 @@ const Home = () => (
         <br></br>
 
         <div className='download'>
-            <img src={app_store_availability_sign} alt='app-store-availability-sign'/>
-            <Button>Download Today!</Button>
-            {/* <Button onclick="linkToAppStore()">Download Today!</Button> */}
+
+            <a href="https://www.apple.com/ios/app-store/" target="_blank">
+            <img style={{width: '150px', height: '62px'}} src={app_store_badge} alt='Click here to download from the App Store'/>
+            </a>
+            <a href="https://play.google.com" target="_blank">
+            <img style={{width: '175px', height: '80px'}} src={google_play_badge} alt='Click here to download from the Google Play Store'/>
+            </a>
         </div>
 
     </React.Fragment>
