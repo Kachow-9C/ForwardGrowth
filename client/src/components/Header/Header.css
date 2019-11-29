@@ -1,14 +1,15 @@
 header {
-	background: #66DAC7;
+	background: #F8F8FF;
 	margin-bottom: 2rem;
-	font-size: 5rem;
+	font-size: 2rem;
     color: #2E4158;
-	text-align: center;
+	text-align: left;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 img {
 	padding: 10px;
-	width: 100px;
+	width: 5%;
 	max-width: 100%;
 	height: auto;
 	vertical-align: middle;
