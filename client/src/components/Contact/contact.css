@@ -18,7 +18,7 @@
   }
   
   .FormTitleContact { 
-    color: white;
+    color: #01579b;
     font-weight: 300;
     margin-bottom: 80px;
     text-align: center;
@@ -30,6 +30,7 @@
     text-align: center;
     font-size: 20px;
     margin-bottom: 60px;
+    color:  #2E4158;
   }
   
   .Contact__Form__Display {
