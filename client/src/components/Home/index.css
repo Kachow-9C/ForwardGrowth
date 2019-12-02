@@ -3,6 +3,7 @@ p.heading {
     font-weight: 300;
     text-align: center;
     font-size: 40px;
+    margin-top: 30px;
 }
 p.summary {
     text-align: center;
