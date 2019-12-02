@@ -15,9 +15,13 @@ import './index.css';
 const Home = () => (
     <React.Fragment>
         <div>
+            {/* <div className = 'intro'> */}
+                <p className = 'heading'> Welcome to Backpack Adventures</p>
+            
             <p className='summary'>
-                A gaming app that  will teach about the fundamentals of budgeting and traveling.
+                A gaming app that  will teach about the fundamentals of budgeting and traveling!
             </p>
+            {/* </div> */}
         </div>
 
         <div className='carousel'>

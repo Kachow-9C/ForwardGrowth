@@ -1,19 +1,39 @@
+p.heading {
+    color: #2E4158;
+    font-weight: 300;
+    text-align: center;
+    font-size: 40px;
+}
 p.summary {
     text-align: center;
-    color: #ffffff
+    color: #2E4158;
+    font-size: 20px;
+    margin-bottom: 3%;
 }
 
 p.company-description {
-    color: #ffffff;
+    color: #2E4158;
     margin-left: auto;
     margin-right: auto;
-    width: 40em
+    text-align: center;
+    width: 40em;
+    font-size: 17px;
+    margin-top: 0px;
+    font-weight: 400;
+}
+
+.intro {
+    margin-top: 3%;
+    color: #2E4158;
+    text-align: center;
+    font-weight: lighter;
 }
 
 body {
 	margin: 0;
 	padding: 0;
-    background-color: #2E4158 !important;
+    /* background-color: #2E4158 !important; */
+    background-color: 	#f9f9f9 !important;
 }
 
 button {
@@ -35,9 +55,16 @@ button:hover {
 .carousel {
     margin-left: auto;
     margin-right: auto;
-    width: 40em
+    text-align: center;
+    margin-bottom: 0px;
+    width: 40em;
 }
 
 .download {
     text-align: center;
+}
+
+img {
+    width: 8%;
+    height: auto;
 }

@@ -1,3 +1,7 @@
+.navStyle { 
+    background-color: black;
+}
+
 .App {
     height: 100vh;
     display: flex;
@@ -9,20 +13,20 @@
     background-color: #66DAC7;
 }
 
-.App__Form {
+/* .App__Form {
     width: 50%;
-    background-color: #2E4158;
+    background-color:#F8F8FF;
     padding: 25px 40px;
     overflow: auto;
-}
+} */
 
-.PageSwitcher {
+/* .PageSwitcher {
     display: flex;
     justify-content: flex-end;
     margin-bottom: 10%;
-}
+} */
 
-.PageSwitcher__Item {
+/* .PageSwitcher__Item {
     background-color: #4C5D72;
     color: #9DA6B1;
     padding: 10px 25px;
@@ -32,12 +36,12 @@
     outline: none;
     display: inline-block;
     text-decoration: none;
-}
+} */
 
-.PageSwitcher__Item--Active {
+/* .PageSwitcher__Item--Active {
     background-color: #5ED0C0;
     color: white;
-}
+} */
 
 .PageSwitcher__Item:first-child {
     border-top-left-radius: 25px;
@@ -48,7 +52,7 @@
     border-bottom-right-radius: 25px;
 }
 
-.FormCenter {
+/* .FormCenter {
     margin-bottom: 100px;
 }
 
@@ -140,4 +144,4 @@
     display: inline-block;
     padding-bottom: 2px;
     margin-left: 5px;
-}
+} */
