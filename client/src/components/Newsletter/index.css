@@ -6,3 +6,11 @@ h2.newsletterTitle {
     font-size: 70px;
     margin-top: 30px;
 }
+
+.postBox {
+    width: 60rem;
+    color: whitesmoke;
+    background-color: #293A4E;
+    margin-bottom: 50px;
+
+}
