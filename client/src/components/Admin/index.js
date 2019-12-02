@@ -3,6 +3,7 @@ import PasswordChangeForm from '../PasswordChange';
 import { AuthUserContext, withAuthorization } from '../Session';
 import FormFile from '../NewsPost/FormFile.js';
 import Container from 'react-bootstrap/Container'
+import DeletePost from '../DeletePost/DeletePost.js';
 import {Link} from "react-router-dom";
 import * as ROUTES from "../../constants/routes";
 
