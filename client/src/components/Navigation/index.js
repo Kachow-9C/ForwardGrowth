@@ -21,9 +21,9 @@ const NavigationAuth = () => (
     <div style={{textAlign: 'right', marginTop: '10px', color: '#00ff001C'}}>
 
             <Link to={ROUTES.HOME} style={{color: 'white', marginRight: '5px'}}>Home</Link> |
-            <Link to={ROUTES.NEWSLETTER} style={{color: 'white', marginRight: '5px', marginLeft: '5px'}}>Newsletter</Link> |
-            <Link to={ROUTES.ACCOUNT} style={{color: 'white', marginRight: '5px', marginLeft: '5px'}}>Account</Link> |
             <Link to={ROUTES.CONTACT} style={{color: 'white', marginLeft: '5px'}}> Contact </Link> |
+            <Link to={ROUTES.NEWSLETTER} style={{color: 'white', marginRight: '5px', marginLeft: '5px'}}>Newsletter</Link> |
+            <Link to={ROUTES.ADMIN} style={{color: 'white', marginRight: '5px', marginLeft: '5px'}}>Admin</Link> |
             <SignOutButton />
     </div>
     </div>

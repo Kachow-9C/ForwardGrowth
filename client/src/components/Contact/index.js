@@ -60,7 +60,7 @@ import Quanisha from '../Contact/quanisha.png';
                     <Col className = "Contact_Description" sm={4}>     
                     {/* FIX-ME: Get the edges for the image rounded  */}
                       <img src={Quanisha} style={{width:'60%', borderWidth: '1', borderRadius: '150', overflow: 'hidden'}}></img>               
-                      <Col style={{fontWeight: 'bold'}}> Qanisha Madison</Col>
+                      <Col style={{fontWeight: 'bold'}}> Quanisha Madison</Col>
                     </Col>
 
                     <Col className = "Contact_Description" sm={8}> Quanisha Madison is a student who is currently pursuing a degree in Business Administration at Santa Fe College in Gainesville, Florida. She taught app design at The Gainesville Girls Rock Camp. She also worked as an Activity Leader in an after school program. She attended The Gainesville Dev Academy, a 12-week bootcamp course for the programming language Swift. Quanisha Madison written an article for the Gainesville Sun “Overcoming A Fear of Failure Is Key To Success.” </Col>
@@ -91,7 +91,7 @@ import Quanisha from '../Contact/quanisha.png';
                               name="email"
                               value={this.state.email}
                               onChange = {this.handleChange.bind(this, 'email')}
-                              placeholder="janedoe@gmail.com"
+                              placeholder="jane@example.com"
                               />
                            </FormGroup>
                          
@@ -122,11 +122,12 @@ import Quanisha from '../Contact/quanisha.png';
                         </FormGroup>
 
                       <Button variant="info" style={{backgroundColor: '#5BD5C0', color: '#293A4E'}}size="lg" block type="submit">
-                        Sumbit
+                        Submit
                       </Button>
                       </Form>
                 </Container>
               </div>
+        
             </div>
           );
         }
