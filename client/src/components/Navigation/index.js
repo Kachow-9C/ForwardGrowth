@@ -35,7 +35,6 @@ const NavigationNonAuth = () => (
        <Link className= "navLink" to={ROUTES.HOME} style={{textDecoration: 'none'}} >Home</Link> |
        <Link className= "navLink" to={ROUTES.CONTACT} style={{textDecoration: 'none'}}> Contact </Link> |
        <Link className= "navLink" to={ROUTES.NEWSLETTER} style={{textDecoration: 'none'}}> Newsletter</Link>
-
             </div>
     </div>
 );
