@@ -1,4 +1,3 @@
-
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { withFirebase } from '../Firebase';
@@ -40,10 +39,10 @@ class PasswordForgetFormBase extends Component {
         const isInvalid = email === '';
         return (
             <Container>
-            <h3 style={{color:'#fff'}}> Forgot Password </h3>
+            <h3 style={{color:'#2E4158', marginTop: '30px'}}> Forgot Password </h3>
             <Form onSubmit={this.onSubmit}>
                 <Form.Group>
-                <Form.Label style={{color:'#FFF'}}>Email Address</Form.Label>
+                <Form.Label style={{color:'#2E4158'}}>Email Address</Form.Label>
                 <Form.Control
                     name="email"
                     value={this.state.email}
@@ -51,7 +50,7 @@ class PasswordForgetFormBase extends Component {
                     type="text"
                 />
                 </Form.Group>
-                <Button variant='info'  style={{backgroundColor: '#5BD5C0', color: '#293A4E'}} size="lg" type="submit">
+                <Button variant='info'  style={{backgroundColor: '#5BD5C0', color: '#293A4E', marginBottom: '20px'}} size="lg" type="submit">
                         Reset My Password
                     </Button>
                 {error && <p>{error.message}</p>}

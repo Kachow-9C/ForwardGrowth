@@ -1,14 +1,20 @@
 import React, { Component } from 'react';
-import { Link, withRouter } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 import { compose } from 'recompose';
 import * as ROUTES from '../../constants/routes';
 import { withFirebase } from '../Firebase';
 import {AuthUserContext, withAuthorization} from "../Session";
+import Button from 'react-bootstrap/Button';
+import Container from 'react-bootstrap/Container'
+import Form from 'react-bootstrap/Form';
+import { FormGroup, Input } from 'reactstrap';
+
+
 
 
 const SignUpPage = () => (
     <div>
-        <h2 className = "FormTitleContact">Register New User</h2>
+        <h3 className = "FormTitleContact" style={{color:'#2E4158', marginTop: '30px'}}>Register New User </h3>
         <SignUpForm />
 
     </div>
@@ -59,18 +65,23 @@ class SignUpFormBase extends Component {
             username === '';
 
         return (
+            <Container>
             <AuthUserContext.Consumer>
                 {authUser => (
-                    <form onSubmit={this.onSubmit}>
-                        <input
+                    <Form onSubmit={this.onSubmit}>
+                        <Form.Group>
+                        
+                        <Form.Control
                             name="username"
                             value={username}
                             onChange={this.onChange}
                             type="text"
                             placeholder="Full Name"
                         />
+                        </Form.Group>
                         <p></p>
-                        <input
+                        <Form.Group>
+                        <Form.Control
                             name="email"
                             value={email}
                             onChange={this.onChange}
@@ -78,30 +89,41 @@ class SignUpFormBase extends Component {
                             placeholder="Email Address"
                         />
                         <p></p>
-                        <input
+                        </Form.Group>
+                        <Form.Group>
+                        <Form.Control
                             name="passwordOne"
                             value={passwordOne}
                             onChange={this.onChange}
                             type="password"
                             placeholder="Password"
                         />
+                        </Form.Group>
                         <p></p>
-                        <input
+                        <Form.Group>
+                        <Form.Control
                             name="passwordTwo"
                             value={passwordTwo}
                             onChange={this.onChange}
                             type="password"
                             placeholder="Confirm Password"
                         />
+                        </Form.Group>
                         <p></p>
-                        <button disabled={isInvalid} type="submit">
+                        <div style={{display:'flex', justifyContent:'center'}}>
+                        <Button disabled={isInvalid} type="submit" style={{backgroundColor: '#2E4158', color: 'white', marginBottom: '20px'}} size="lg" type="submit">
                             Create New User
-                        </button>
+                        </Button>
+                        </div>
                         {error && <p>{error.message}</p>}
-                    </form>
-                )}
 
+                    </Form>
+                    
+                )}
+           
             </AuthUserContext.Consumer>
+            </Container>
+
 
         );
     }

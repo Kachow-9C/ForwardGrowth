@@ -3,7 +3,7 @@ import '../Contact/contact.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import * as emailjs from 'emailjs-com';
 import { Container, Row, Col, Button, Form } from 'react-bootstrap';
-import { FormFeedback, FormGroup, Label, Input } from 'reactstrap';
+import { FormGroup, Input } from 'reactstrap';
 import Quanisha from '../Contact/quanisha.png';
 
  class Contact extends Component {
@@ -48,7 +48,7 @@ import Quanisha from '../Contact/quanisha.png';
 
   render() {
         return (
-            <div className="App">
+
 
               <div className = "App__Form__Full">
         
@@ -58,8 +58,7 @@ import Quanisha from '../Contact/quanisha.png';
                   <Row className = "FormRow" >
                     
                     <Col className = "Contact_Description" sm={4}>     
-                    {/* FIX-ME: Get the edges for the image rounded  */}
-                      <img src={Quanisha} style={{width:'60%', borderWidth: '1', borderRadius: '150', overflow: 'hidden'}}></img>               
+                      <img src={Quanisha} style={{width:'60%', borderWidth: '1', borderRadius: '150', overflow: 'hidden', alt: "Quanisha Headshot"}}></img>
                       <Col style={{fontWeight: 'bold'}}> Quanisha Madison</Col>
                     </Col>
 
@@ -128,7 +127,7 @@ import Quanisha from '../Contact/quanisha.png';
                 </Container>
               </div>
         
-            </div>
+
           );
         }
 }

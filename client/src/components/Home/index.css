@@ -1,8 +1,9 @@
 p.heading {
-    color: #2E4158;
+    color: #01579b;
     font-weight: 300;
     text-align: center;
-    font-size: 40px;
+    font-size: 70px;
+    margin-top: 30px;
 }
 p.summary {
     text-align: center;
@@ -33,7 +34,7 @@ body {
 	margin: 0;
 	padding: 0;
     /* background-color: #2E4158 !important; */
-    background-color: 	#f9f9f9 !important;
+    background-color: 	#F8F8FF !important;
 }
 
 button {
