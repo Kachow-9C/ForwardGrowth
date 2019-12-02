@@ -7,7 +7,7 @@ import './index.css';
 import { CardFooter } from 'react-bootstrap/Card';
 
 
-class StatefulNewsletter extends Component{
+class StatefulNewsletterAdmin extends Component{
     constructor(){
         super();
         this.state = {newsletters: []}
@@ -22,6 +22,12 @@ class StatefulNewsletter extends Component{
         })
     }
 
+    deletePost(id){
+        fetch('/api/newsletters/delete/' + id,{
+            method : 'DELETE',
+
+        }).then(res=>res)
+    }
 
     render(){
         
@@ -42,6 +48,11 @@ class StatefulNewsletter extends Component{
                                 From: {newsletter.author}<br/>      
                                 <i>Date: {newsletter.created_at}</i>
                                 </Card.Text>
+                                <Card.Text className = 'text-right'>
+                                <Button variant='danger' size="lg" href='/newsletter' onClick={this.deletePost.bind(this, newsletter._id)}>
+                                    Delete
+                                 </Button>
+                                </Card.Text>
                             </Card.Body>
                         </Card>
                     </div> 
@@ -51,4 +62,4 @@ class StatefulNewsletter extends Component{
         );
     }
 }
-export default StatefulNewsletter;
+export default StatefulNewsletterAdmin;

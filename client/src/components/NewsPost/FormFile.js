@@ -58,7 +58,7 @@ class CreatePost extends Component {
                         <Form.Control value={this.state.author} onChange={(e) => this.setState({author:e.target.value})} type="text"/>
                     </Form.Group>
 
-                    <Button variant='info'  style={{backgroundColor: '#5BD5C0', color: '#2E4158'}} size="lg" type="submit">
+                    <Button variant='info' style={{backgroundColor: '#5BD5C0', color: '#2E4158'}} size="lg" type="submit">
                         Post
                     </Button>
                 </Form>
