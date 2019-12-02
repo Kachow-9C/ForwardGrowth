@@ -11,7 +11,7 @@ const AdminPage = () => (
     <AuthUserContext.Consumer>
         {authUser => (
             <div>
-                <h2 className = "FormTitleContact"> Administrator Console</h2>
+                <h2 style={{marginBottom: '30px', textAlign:'center', marginTop: '45px', color: '#01579b', fontSize: '70px', fontWeight:'300'}}> Administrator Console</h2>
                 <Container>
                     <h3 className='text-center' style={{color:'#2E4158'}}> Welcome: {authUser.email} </h3>
                 </Container><br/><br/><br/><br/>
