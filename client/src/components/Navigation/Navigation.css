@@ -12,6 +12,14 @@
     width: 50%;
     background-color: #66DAC7;
 }
+.navLink {
+    color:white;
+    marginRight: '5px';
+    textDecoration: 'none';
+}
+.navLink:hover {
+    color: #4d9dc9;
+}
 
 /* .App__Form {
     width: 50%;
