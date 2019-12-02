@@ -23,7 +23,7 @@ class StatefulNewsletter extends Component{
     render(){
         
         return(
-            <div className="App">
+
               <div className = "App__Form__Full">
         
                 <h2 className = "newsletterTitle"> Newsletter </h2>
@@ -44,7 +44,7 @@ class StatefulNewsletter extends Component{
                     </div> 
                 )}
               </div>
-            </div>
+
         );
     }
 }

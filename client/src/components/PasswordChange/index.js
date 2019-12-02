@@ -35,10 +35,10 @@ class PasswordChangeForm extends Component {
         return (
             
             <Container>
-            <h3 style={{color:'#fff'}}> Change Password </h3>
+            <h3 style={{color:' #2E4158'}}> Change Password </h3>
             <Form onSubmit={this.onSubmit}>
                 <Form.Group>
-                <Form.Label style={{color:'#FFF'}}>New Password</Form.Label>
+                <Form.Label style={{color:' #2E4158'}}>New Password</Form.Label>
                 <Form.Control
                     name="passwordOne"
                     value={passwordOne}
@@ -47,7 +47,7 @@ class PasswordChangeForm extends Component {
                 />
                 </Form.Group>
                 <Form.Group>
-                <Form.Label style={{color:'#FFF'}}>Confirm New Password</Form.Label>
+                <Form.Label style={{color:' #2E4158'}}>Confirm New Password</Form.Label>
                 <Form.Control
                     name="passwordTwo"
                     value={passwordTwo}
