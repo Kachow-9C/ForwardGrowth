@@ -13,7 +13,7 @@ import Contact from '../Contact';
 import Newsletter from '../Newsletter'
 import Footer from "../Footer";
 
-import { Container, Row, Col, Button, Form } from 'react-bootstrap';
+import { Row, Col} from 'react-bootstrap';
 
 const App = () => (
     <Router>
