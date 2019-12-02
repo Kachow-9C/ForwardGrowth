@@ -15,8 +15,14 @@ render() {
 
               <h2 className = "FormTitleContact"> Meet the Team </h2>
 
+<<<<<<< HEAD
               <Container>
                 <Row className = "FormRow" >
+=======
+  render() {
+        return (
+
+>>>>>>> e22ea33c1ed757ec2f2db00defa12e1b7520006f
 
                   <Col className = "Contact_Description" sm={4}>
                     <img src={Quanisha} style={{width:'60%', borderWidth: '1', borderRadius: '150', overflow: 'hidden', alt: "Quanisha Headshot"}}></img>
@@ -28,10 +34,48 @@ render() {
 
               </Container>
 
+<<<<<<< HEAD
             </div>
 
         );
       }
+=======
+                      <FormGroup controlId="formBasicName">
+                        <Form.Label> Subject </Form.Label>
+                          <Input 
+                          type="text"
+                          name="subject"
+                          value={this.state.subject}
+                          className="text-primary"
+                          onChange={this.handleChange.bind(this, 'subject')}
+                          placeholder = "Subject"
+                          />
+                        </FormGroup>
+
+                        <FormGroup controlId="formBasicMessage">
+                        <Form.Label> Message </Form.Label>
+                        <Input 
+                        type="textarea"
+                        rows="3"
+                        name="message"
+                        className="text-primary"
+                        value={this.state.message}
+                        onChange={this.handleChange.bind(this, 'message')}
+                        placeholder="Message"
+                        />
+                        </FormGroup>
+
+                      <Button variant="info" style={{backgroundColor: '#5BD5C0', color: '#293A4E'}}size="lg" block type="submit">
+                        Submit
+                      </Button>
+                      </Form>
+                </Container>
+              </div>
+        
+
+          );
+        }
+>>>>>>> e22ea33c1ed757ec2f2db00defa12e1b7520006f
 }
 
 export default Contact;

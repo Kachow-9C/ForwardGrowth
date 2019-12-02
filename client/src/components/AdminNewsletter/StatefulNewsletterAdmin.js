@@ -7,7 +7,7 @@ import './index.css';
 import { CardFooter } from 'react-bootstrap/Card';
 
 
-class StatefulNewsletter extends Component{
+class StatefulNewsletterAdmin extends Component{
     constructor(){
         super();
         this.state = {newsletters: []}
@@ -22,16 +22,23 @@ class StatefulNewsletter extends Component{
         })
     }
 
+    deletePost(id){
+        fetch('/api/newsletters/delete/' + id,{
+            method : 'DELETE',
+
+        }).then(res=>res)
+    }
 
     render(){
         
         return(
+
               <div className = "App__Form__Full">
         
                 <h2 className = "newsletterTitle"> Newsletter </h2>
                 {this.state.newsletters.map(newsletter => 
-                    <div className = "postTitle" style={{display: 'flex', justifyContent: 'center'}}>
-                        <Card className = 'text-center postBox'>
+                    <div style={{display: 'flex', justifyContent: 'center' }}>
+                        <Card className = 'text-center' style={{width: '75rem',color: '#293A4E', backgroundColor: '#5BD5C0', marginBottom: '50px'}}>
                             <Card.Body>
                                 <Card.Title>{newsletter.title}</Card.Title>
                                 <Card.Text>
@@ -41,12 +48,18 @@ class StatefulNewsletter extends Component{
                                 From: {newsletter.author}<br/>      
                                 <i>Date: {newsletter.created_at}</i>
                                 </Card.Text>
+                                <Card.Text className = 'text-right'>
+                                <Button variant='danger' size="lg" href='/adminnewsletter' onClick={this.deletePost.bind(this, newsletter._id)}>
+                                    Delete
+                                 </Button>
+                                </Card.Text>
                             </Card.Body>
                         </Card>
                     </div> 
                 )}
               </div>
+
         );
     }
 }
-export default StatefulNewsletter;
+export default StatefulNewsletterAdmin;
