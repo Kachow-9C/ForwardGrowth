@@ -12,6 +12,7 @@ import { withAuthentication } from '../Session';
 import Contact from '../Contact';
 import Newsletter from '../Newsletter'
 import Footer from "../Footer";
+import AdminNewsletter from '../AdminNewsletter'
 
 import { Row, Col} from 'react-bootstrap';
 
@@ -39,6 +40,7 @@ const App = () => (
             <Route path={ROUTES.ADMIN} component={AdminPage} />
             <Route path={ROUTES.CONTACT} component={Contact}/>
             <Route path={ROUTES.NEWSLETTER} component={Newsletter}/>
+            <Route path={ROUTES.ADMINNEWSLETTER} component={AdminNewsletter}/>
             <div style={{backgroundColor: '#F8F8FF'}}>
                 <Footer />
             </div>
