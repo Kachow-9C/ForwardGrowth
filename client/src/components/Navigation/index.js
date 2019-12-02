@@ -20,20 +20,20 @@ const NavigationAuth = () => (
 
     <div style={{textAlign: 'right', marginTop: '10px', color: '#00ff001C'}}>
 
-            <Link to={ROUTES.HOME} style={{color: 'white', marginRight: '5px'}}>Home</Link> |
-            <Link to={ROUTES.CONTACT} style={{color: 'white', marginLeft: '5px'}}> Contact </Link> |
-            <Link to={ROUTES.NEWSLETTER} style={{color: 'white', marginRight: '5px', marginLeft: '5px'}}>Newsletter</Link> |
-            <Link to={ROUTES.ADMIN} style={{color: 'white', marginRight: '5px', marginLeft: '5px'}}>Admin</Link> |
+            <Link to={ROUTES.HOME} style={{color: 'white', marginRight: '5px',textDecoration: 'none'}}>Home</Link> |
+            <Link to={ROUTES.CONTACT} style={{color: 'white', marginLeft: '5px', textDecoration: 'none'}}> Contact </Link> |
+            <Link to={ROUTES.NEWSLETTER} style={{color: 'white', marginRight: '5px', marginLeft: '5px', textDecoration: 'none'}}>Newsletter</Link> |
+            <Link to={ROUTES.ADMIN} style={{color: 'white', marginRight: '5px', marginLeft: '5px', textDecoration: 'none'}}>Admin</Link> |
             <SignOutButton />
     </div>
     </div>
 );
 const NavigationNonAuth = () => (
     <div > 
-   <div style={{textAlign: 'right', marginTop: '10px', color: '#00ff001C'}}>
-            <Link to={ROUTES.HOME} style={{color: 'white', marginRight: '5px'}}>Home</Link> |
-            <Link to={ROUTES.CONTACT} style={{color: 'white', marginRight: '5px', marginLeft: '5px'}}> Contact </Link> |
-            <Link to={ROUTES.NEWSLETTER} style={{color: 'white', marginLeft: '5px'}}>Newsletter</Link>
+   <div style={{textAlign: 'right', marginTop: '10px', color: '#00ff001C', textDecoration: 'none'}}>
+            <Link to={ROUTES.HOME} style={{color: 'white', marginRight: '5px', textDecoration: 'none'}}>Home</Link> |
+            <Link to={ROUTES.CONTACT} style={{color: 'white', marginRight: '5px', marginLeft: '5px', textDecoration: 'none'}}> Contact </Link> |
+            <Link to={ROUTES.NEWSLETTER} style={{color: 'white', marginLeft: '5px', textDecoration: 'none'}}>Newsletter</Link>
 
             </div>
     </div>
