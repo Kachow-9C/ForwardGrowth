@@ -32,6 +32,8 @@ module.exports.init = () => {
 
     app.post('/api/newsletters/new', newsletters.create);
 
+    app.delete('/api/newsletters/delete/:id', newsletters.delete);
+
     if (process.env.NODE_ENV === 'production') {
         // Serve any static files
         app.use(express.static(path.join(__dirname, '../../client/build')));

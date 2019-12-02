@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import SignOutButton from '../SignOut';
 import * as ROUTES from '../../constants/routes';
 import { AuthUserContext } from '../Session';
+import css from './Navigation.css'
 
 
 const Navigation = () => (
@@ -20,20 +21,20 @@ const NavigationAuth = () => (
 
     <div style={{textAlign: 'right', marginTop: '10px', color: '#00ff001C'}}>
 
-            <Link to={ROUTES.HOME} style={{color: 'white', marginRight: '5px',textDecoration: 'none'}}>Home</Link> |
-            <Link to={ROUTES.CONTACT} style={{color: 'white', marginLeft: '5px', textDecoration: 'none'}}> Contact </Link> |
-            <Link to={ROUTES.NEWSLETTER} style={{color: 'white', marginRight: '5px', marginLeft: '5px', textDecoration: 'none'}}>Newsletter</Link> |
-            <Link to={ROUTES.ADMIN} style={{color: 'white', marginRight: '5px', marginLeft: '5px', textDecoration: 'none'}}>Admin</Link> |
+            <Link className= "navLink" to={ROUTES.HOME} style={{textDecoration: 'none'}} >Home</Link> |
+            <Link className= "navLink" to={ROUTES.CONTACT} style={{textDecoration: 'none'}}> Contact </Link> |
+            <Link className= "navLink" to={ROUTES.ADMINNEWSLETTER} style={{textDecoration: 'none'}}> Newsletter</Link> |
+            <Link className= "navLink" to={ROUTES.ADMIN} style={{textDecoration: 'none'}}> Admin</Link> |
             <SignOutButton />
     </div>
     </div>
 );
 const NavigationNonAuth = () => (
     <div > 
-   <div style={{textAlign: 'right', marginTop: '10px', color: '#00ff001C', textDecoration: 'none'}}>
-            <Link to={ROUTES.HOME} style={{color: 'white', marginRight: '5px', textDecoration: 'none'}}>Home</Link> |
-            <Link to={ROUTES.CONTACT} style={{color: 'white', marginRight: '5px', marginLeft: '5px', textDecoration: 'none'}}> Contact </Link> |
-            <Link to={ROUTES.NEWSLETTER} style={{color: 'white', marginLeft: '5px', textDecoration: 'none'}}>Newsletter</Link>
+   <div style={{textAlign: 'right', marginTop: '10px', color: '#00ff001C'}}>
+       <Link className= "navLink" to={ROUTES.HOME} style={{textDecoration: 'none'}} >Home</Link> |
+       <Link className= "navLink" to={ROUTES.CONTACT} style={{textDecoration: 'none'}}> Contact </Link> |
+       <Link className= "navLink" to={ROUTES.NEWSLETTER} style={{textDecoration: 'none'}}> Newsletter</Link>
 
             </div>
     </div>

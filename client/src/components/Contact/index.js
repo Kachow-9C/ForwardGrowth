@@ -48,7 +48,7 @@ import Quanisha from '../Contact/quanisha.png';
 
   render() {
         return (
-            <div className="App">
+
 
               <div className = "App__Form__Full">
         
@@ -127,7 +127,7 @@ import Quanisha from '../Contact/quanisha.png';
                 </Container>
               </div>
         
-            </div>
+
           );
         }
 }
