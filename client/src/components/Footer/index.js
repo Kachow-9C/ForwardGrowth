@@ -15,7 +15,7 @@ const Footer = () => (
 );
 
 const FooterNonAuth = () => (
-    <div style={{color: 'white', textAlign: 'center'}}>
+    <div style={{color:  '#2E4158', textAlign: 'center'}}>
         <br></br>
         Copyright 2019 Forward Growth | Are you a team member? <Link to={ROUTES.SIGN_IN}>Sign In Here</Link>
 
@@ -23,10 +23,11 @@ const FooterNonAuth = () => (
 );
 
 const FooterAuth = () => (
-    <div style={{color: 'white', textAlign: 'center'}}>
+    <div style={{color:  '#2E4158', textAlign: 'center'}}>
         <br></br>
         Copyright 2019 Forward Growth
 
     </div>
 );
 export default Footer;
+

@@ -2,7 +2,6 @@ import React from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Header from '../Header';
 import Navigation from '../Navigation';
-
 import SignUpPage from '../SignUp';
 import SignInPage from '../SignIn';
 import PasswordForgetPage from '../PasswordForget';
@@ -13,12 +12,23 @@ import { withAuthentication } from '../Session';
 import Contact from '../Contact';
 import Newsletter from '../Newsletter'
 import Footer from "../Footer";
+
+import { Container, Row, Col, Button, Form } from 'react-bootstrap';
+
 const App = () => (
     <Router>
         <div>
-            <Header />
-            <Navigation />
-            <hr />
+            <Row style={{backgroundColor: '#2E4158', width: '101%'}}> 
+                <Col>
+                    <Header />
+                </Col>
+                    
+                <Col>
+                    <Navigation />
+                </Col>
+            </Row>
+            
+
             <Route exact path={ROUTES.HOME} component={HomePage} />
             <Route path={ROUTES.SIGN_UP} component={SignUpPage} />
             <Route path={ROUTES.SIGN_IN} component={SignInPage} />
@@ -29,9 +39,13 @@ const App = () => (
             <Route path={ROUTES.ADMIN} component={AdminPage} />
             <Route path={ROUTES.CONTACT} component={Contact}/>
             <Route path={ROUTES.NEWSLETTER} component={Newsletter}/>
-            <Footer />
-
+            <div style={{backgroundColor: '#F8F8FF'}}>
+                <Footer />
+            </div>
+    
+            
         </div>
     </Router>
+    
 );
 export default withAuthentication(App);
