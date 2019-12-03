@@ -5,14 +5,12 @@ import { withFirebase } from '../Firebase';
 import * as ROUTES from '../../constants/routes';
 import { PasswordForgetLink } from '../PasswordForget';
 import './SignIn.css';
+import Container from 'react-bootstrap/Form';
 
 
 const SignInPage = () => (
     <div>
-        {/* <h1>SignIn</h1> */}
         <SignInForm />
-        {/* <PasswordForgetLink /> */}
-        {/* <SignUpLink /> */}
     </div>
 );
 const INITIAL_STATE = {
@@ -45,13 +43,10 @@ class SignInFormBase extends Component {
         const { email, password, error } = this.state;
         const isInvalid = password === '' || email === '';
         return (
-            <div className = "App">
-                <div className = "App__Aside"></div>
                 <div className = "App__Form">
 
-                    <div className="FormTitle">
-                        <a href = "#" className= "FormTitle__Link"> Sign In</a>
-                    </div>
+                <Container>
+                    <h3 className="FormTitle"> Sign In</h3>
 
                     <div className="FormCenter">
                         <form className="FormFields" onSubmit={this.onSubmit}>
@@ -79,19 +74,21 @@ class SignInFormBase extends Component {
                                     placeholder="Enter Password"
                             /></div>
                             </div>
-                            <div className = "FormField"></div>
+                        
+                            <div className = "FormField" style={{display: 'flex', justifyContent: 'center'}}></div>
                                 <button className = "FormField__Button mr-20" disabled={isInvalid} type="submit">
                                     Sign In!
                                 </button>
                             {error && <p>{error.message}</p>}
                         </form>
                     </div>
+                    </Container>
+
                     <div>
                             <PasswordForgetLink />
                         </div>
-
                 </div>
-            </div>
+
         );
     }
 }

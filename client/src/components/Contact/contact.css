@@ -3,12 +3,12 @@
     display: flex;
     color: white;
   }
-  
+
   .App__Aside {
     width: 50%;
-    background-color: #66DAC7;
+    background-color:#4d9dc9;
   }
-  
+
   .App__Form__Full {
     width: 100%;
     background-color: #F8F8FF;
@@ -16,22 +16,15 @@
     padding: 25px 40px;
     overflow: auto;
   }
-  
-  .FormTitleContact { 
-    color: #01579b;
-    font-weight: 300;
-    margin-bottom: 80px;
-    text-align: center;
-    font-size: 70px;
-    margin-top: 30px;
-  
-  }
-  
-  .Contact_Description { 
+
+  .Contact_Description {
     text-align: center;
     font-size: 20px;
     margin-bottom: 60px;
     color:  #2E4158;
+    border: 2px;
+    border-style: solid;
+    border-color: #01579b;
   }
   
   .Contact__Form__Display {
@@ -41,7 +34,7 @@
   }
   
   .ContactForm__Button {
-    background-color: #52C4B9;
+    background-color: #4d9dc9;
     color: white;
     border: none;
     outline: none;
