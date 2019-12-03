@@ -41,6 +41,7 @@ class Home extends Component {
               '<USER ID>'
             )
             this.resetForm()
+            alert('Message Sent')
         }
     
           resetForm() {
@@ -54,6 +55,7 @@ class Home extends Component {
     
           handleChange = (param, e) => {
             this.setState({ [param]: e.target.value })
+
           }
     
 

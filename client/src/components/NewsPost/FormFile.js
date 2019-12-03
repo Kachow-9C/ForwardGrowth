@@ -35,6 +35,7 @@ class CreatePost extends Component {
                 'created_at' : new Date().toLocaleString()
             })
         });
+        alert('Newsletter Posted!')
     };
 
     render(){
