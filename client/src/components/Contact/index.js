@@ -38,12 +38,12 @@ render() {
                     </a>
                   </Col>
                   <Col>
-                    <a href = "https://facebook.com">
+                    <a href = "https://facebook.com" target="_blank">
                     <img alt="Facebook icon" src={Facebook} style ={{width: '90px', height:'auto'}}></img>
                     </a>
                   </Col>
                   <Col>
-                    <a href="https://twitter.com/quanishamadison">
+                    <a href="https://twitter.com/quanishamadison" target="_blank">
                     <img alt="Twitter Icon" src={Twitter} style ={{width: '90px', height:'auto'}}></img>
                     </a>
                   </Col>
