@@ -9,7 +9,7 @@ import app_preview5 from '../../assets/screenshots/app-preview5.jpg';
 import app_store_badge from '../../assets/app-store-badge.png';
 import google_play_badge from '../../assets/google-play-badge.png'
 import * as emailjs from 'emailjs-com';
-import { Container, Row, Col, Form, Button } from 'react-bootstrap';
+import { Container, Form, Button } from 'react-bootstrap';
 import { FormGroup, Input } from 'reactstrap';
 import './Home.css';
 
@@ -101,10 +101,10 @@ class Home extends Component {
                 <div className='download'>
 
                     <a href="https://www.apple.com/ios/app-store/" target="_blank">
-                    <img style={{width: '150px', height: '62px'}} src={app_store_badge} alt='Click here to download from the App Store'/>
+                    <img alt="App Store Button" style={{width: '150px', height: '62px'}} src={app_store_badge}/>
                     </a>
                     <a href="https://play.google.com" target="_blank">
-                    <img style={{width: '175px', height: '80px'}} src={google_play_badge} alt='Click here to download from the Google Play Store'/>
+                    <img alt="Play Store Button" style={{width: '175px', height: '80px'}} src={google_play_badge} />
                     </a>
                 </div>
 
