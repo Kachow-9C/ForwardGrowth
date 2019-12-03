@@ -34,13 +34,19 @@ render() {
               <div style={{display:'flex', justifyContent:'center'}}>
                 <Row>
                   <Col>
+                    <a href="mailto:madisonquanisha11@gmail.com">
                     <img src={Email} style = {{width: '90px', height:'auto', marginBottom: '100px'}}></img>
+                    </a>
                   </Col>
                   <Col>
+                    <a href = "https://facebook.com">
                     <img src={Facebook} style ={{width: '90px', height:'auto'}}></img>
+                    </a>
                   </Col>
                   <Col>
+                    <a href="https://twitter.com/quanishamadison">
                     <img src={Twitter} style ={{width: '90px', height:'auto'}}></img>
+                    </a>
                   </Col>
                 </Row>
               </div>
