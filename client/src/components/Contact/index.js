@@ -45,7 +45,7 @@ import Quanisha from '../Contact/quanisha.png';
       handleChange = (param, e) => {
         this.setState({ [param]: e.target.value })
       }
-
+ 
   render() {
         return (
 

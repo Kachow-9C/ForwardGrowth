@@ -175,5 +175,4 @@ class Home extends Component {
     </React.Fragment>
         )}
 };
-// );
 export default Home;
