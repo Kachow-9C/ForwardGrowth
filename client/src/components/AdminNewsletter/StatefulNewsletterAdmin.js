@@ -49,7 +49,7 @@ class StatefulNewsletterAdmin extends Component{
                                 <i>Date: {newsletter.created_at}</i>
                                 </Card.Text>
                                 <Card.Text className = 'text-right'>
-                                <Button variant='danger' size="lg" href='/newsletter' onClick={this.deletePost.bind(this, newsletter._id)}>
+                                <Button variant='danger' size="lg" href='/adminnewsletter' onClick={this.deletePost.bind(this, newsletter._id)}>
                                     Delete
                                  </Button>
                                 </Card.Text>
