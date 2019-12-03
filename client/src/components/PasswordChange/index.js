@@ -15,6 +15,7 @@ class PasswordChangeForm extends Component {
         this.state = { ...INITIAL_STATE };
     }
     onSubmit = event => {
+        var flag = 0;
         const { passwordOne } = this.state;
         this.props.firebase
             .doPasswordUpdate(passwordOne)
@@ -23,6 +24,12 @@ class PasswordChangeForm extends Component {
             })
             .catch(error => {
                 this.setState({ error });
+                flag++;
+            })
+            .finally(() => {
+                if (flag === 0){
+                    alert("Password has successfully been changed")
+                }
             });
         event.preventDefault();
     };

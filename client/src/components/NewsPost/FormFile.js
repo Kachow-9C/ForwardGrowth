@@ -23,18 +23,37 @@ class CreatePost extends Component {
 
 
     onSubmit(e){
-        e.preventDefault()
-        fetch('/api/newsletters/new', {
-            method : 'POST',
-            headers : {'Content-Type' : 'application/json'},
-            body: JSON.stringify({
-                'title' : this.state.title,
-                'content' : this.state.content,
-                'author' : this.state.author,
-                'created_at' : new Date().toLocaleString()
-            })
-        });
-        alert('Newsletter Posted!')
+        var flag = 0;
+        e.preventDefault();
+        var message = 'You are missing the following fields: ';
+        if (this.state.title === '') {
+            message += 'Title ';
+            flag++;
+        }
+        if (this.state.content === '') {
+            message += 'Body ';
+            flag++;
+        }
+        if (this.state.author === '') {
+            message += 'Author';
+            flag++;
+        }
+        if (flag === 0) {
+            message = "Newsletter Entry Successfully Posted!"
+
+            fetch('/api/newsletters/new', {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify({
+                    'title': this.state.title,
+                    'content': this.state.content,
+                    'author': this.state.author,
+                    'created_at': new Date().toLocaleString()
+                })
+            });
+        }
+        alert(message);
+
     };
 
     render(){
