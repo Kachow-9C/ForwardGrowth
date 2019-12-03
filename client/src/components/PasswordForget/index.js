@@ -49,6 +49,7 @@ class PasswordForgetFormBase extends Component {
     };
     render() {
         const { email, error } = this.state;
+        const isInvalid = email === '';
         return (
             <Container>
             <h3 style={{color:'#2E4158', marginTop: '30px'}}> Forgot Password </h3>
@@ -62,7 +63,7 @@ class PasswordForgetFormBase extends Component {
                     type="text"
                 />
                 </Form.Group>
-                <Button variant='info'  style={{backgroundColor: '#293A4E', color: '#293A4E'}} size="lg" type="submit">
+                <Button variant='info'  style={{backgroundColor: '#4d9dc9', color: '#293A4E'}} size="lg" type="submit">
                         Reset My Password
                     </Button>
                 {error && <p>{error.message}</p>}
