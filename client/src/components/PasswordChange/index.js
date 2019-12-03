@@ -55,7 +55,7 @@ class PasswordChangeForm extends Component {
                     type="password"
                 />
                 </Form.Group>
-                <Button variant='info'  style={{backgroundColor: '#5BD5C0', color: '#293A4E'}} size="lg" type="submit">
+                <Button variant='info'  style={{backgroundColor: '#4d9dc9', color: 'white'}} size="lg" type="submit">
                         Change My Password
                     </Button>
                 {error && <p>{error.message}</p>}
