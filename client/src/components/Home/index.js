@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Component} from 'react';
 import { Button } from 'react-bootstrap';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
@@ -10,9 +10,57 @@ import app_preview5 from '../../assets/screenshots/app-preview5.jpg';
 import app_store_badge from '../../assets/app-store-badge.png';
 import google_play_badge from '../../assets/google-play-badge.png'
 import './index.css';
+import * as emailjs from 'emailjs-com';
+import { Container, Row, Col, Form } from 'react-bootstrap';
+import { FormGroup, Input } from 'reactstrap';
 
 
-const Home = () => (
+// const Home = () => (
+class Home extends Component {
+
+
+    state = {
+        name: '',
+        email: '',
+        subject: '',
+        message: '',
+        }
+    
+        handleSubmit(e) {
+            e.preventDefault()
+            const { name, email, subject, message } = this.state
+            let templateParams = {
+              from_name: email,
+              to_name: 'Quanisha',
+              subject: subject,
+              message_html: message,
+            }
+            emailjs.send(
+              'gmail',
+              '<TEMPLATE ID>',
+              templateParams,
+              '<USER ID>'
+            )
+            this.resetForm()
+        }
+    
+          resetForm() {
+            this.setState({
+              name: '',
+              email: '',
+              subject: '',
+              message: '',
+            })
+          }
+    
+          handleChange = (param, e) => {
+            this.setState({ [param]: e.target.value })
+          }
+    
+
+    render () {
+
+        return (
     <React.Fragment>
         <div>
             {/* <div className = 'intro'> */}
@@ -65,6 +113,67 @@ const Home = () => (
             </a>
         </div>
 
+        <Container> 
+                  <h6 className = "FormTitleContact"> Let us know what you think! </h6>
+                    <Form onSubmit = {this.handleSubmit.bind(this)}>
+
+                        <FormGroup controlId="formBasicName">
+                          <Form.Label> Full Name </Form.Label>
+                          <Input 
+                          type="text"
+                          name="name"
+                          value={this.state.name}
+                          className="text-primary"
+                          onChange={this.handleChange.bind(this, 'name')}
+                          placeholder = "Jane Doe"
+                          />
+                        </FormGroup>
+                        
+                           <FormGroup controlId="formBasicEmail">
+                             <Form.Label> Email </Form.Label> 
+                              <Input 
+                              type="email"
+                              name="email"
+                              value={this.state.email}
+                              onChange = {this.handleChange.bind(this, 'email')}
+                              placeholder="jane@example.com"
+                              />
+                           </FormGroup>
+                         
+
+                      <FormGroup controlId="formBasicName">
+                        <Form.Label> Subject </Form.Label>
+                          <Input 
+                          type="text"
+                          name="subject"
+                          value={this.state.subject}
+                          className="text-primary"
+                          onChange={this.handleChange.bind(this, 'subject')}
+                          placeholder = "Subject"
+                          />
+                        </FormGroup>
+
+                        <FormGroup controlId="formBasicMessage">
+                        <Form.Label> Message </Form.Label>
+                        <Input 
+                        type="textarea"
+                        rows="3"
+                        name="message"
+                        className="text-primary"
+                        value={this.state.message}
+                        onChange={this.handleChange.bind(this, 'message')}
+                        placeholder="Message"
+                        />
+                        </FormGroup>
+
+                      <Button variant="info" style={{backgroundColor: '#4d9dc9', color: '#293A4E'}}size="lg" block type="submit">
+                        Submit
+                      </Button>
+                      </Form>
+                </Container>
+
     </React.Fragment>
-);
+        )}
+};
+// );
 export default Home;

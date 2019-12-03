@@ -6,7 +6,7 @@
   
   .App__Aside {
     width: 50%;
-    background-color: #66DAC7;
+    background-color:#4d9dc9;
   }
   
   .App__Form__Full {
@@ -41,7 +41,7 @@
   }
   
   .ContactForm__Button {
-    background-color: #52C4B9;
+    background-color: #4d9dc9;
     color: white;
     border: none;
     outline: none;

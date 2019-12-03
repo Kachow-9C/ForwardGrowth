@@ -67,7 +67,7 @@ import Quanisha from '../Contact/quanisha.png';
         
                 </Container>
         
-                <Container> 
+                {/* <Container> 
                   <h6 className = "FormTitleContact"> Let us know what you think! </h6>
                     <Form onSubmit = {this.handleSubmit.bind(this)}>
 
@@ -120,11 +120,11 @@ import Quanisha from '../Contact/quanisha.png';
                         />
                         </FormGroup>
 
-                      <Button variant="info" style={{backgroundColor: '#5BD5C0', color: '#293A4E'}}size="lg" block type="submit">
+                      <Button variant="info" style={{backgroundColor: '#4d9dc9', color: '#293A4E'}}size="lg" block type="submit">
                         Submit
                       </Button>
                       </Form>
-                </Container>
+                </Container> */}
               </div>
         
 
