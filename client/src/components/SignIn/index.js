@@ -81,12 +81,17 @@ class SignInFormBase extends Component {
                                 </button>
                             {error && <p>{error.message}</p>}
                         </form>
+
+
                     </div>
+                    <div style={{display: 'flex', justifyContent: 'center'}}>
+
+                        <PasswordForgetLink />
+                    </div>
+
                     </Container>
 
-                    <div>
-                            <PasswordForgetLink />
-                        </div>
+
                 </div>
 
         );

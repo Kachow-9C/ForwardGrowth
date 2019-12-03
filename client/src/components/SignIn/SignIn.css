@@ -44,7 +44,7 @@
 } */
 
 .FormCenter {
-    margin-bottom: 100px;
+    margin-bottom: 20px;
     display: flex;
     justify-content: center;
     text-align: center;
@@ -90,7 +90,7 @@
     text-align: center;
 }
 .FormField__Input {
-    width: 85%;
+    width: 115%;
     background-color: transparent;
     border: none;
     color: #01579b;

@@ -21,7 +21,7 @@ class Home extends Component {
         subject: '',
         message: '',
         }
-    
+
         handleSubmit(e) {
             e.preventDefault()
             const { name, email, subject, message } = this.state
@@ -41,7 +41,7 @@ class Home extends Component {
             alert("Message Sent");
             this.resetForm()
         }
-    
+
         resetForm() {
         this.setState({
             name: '',
@@ -54,7 +54,7 @@ class Home extends Component {
         handleChange = (param, e) => {
         this.setState({ [param]: e.target.value })
         }
-    
+
     render () {
         return (
             <React.Fragment>
@@ -109,6 +109,7 @@ class Home extends Component {
                     </a>
                 </div>
 
+            <hr/>
 
             <div className = "App__Form__Full">
 
