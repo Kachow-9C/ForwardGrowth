@@ -13,7 +13,7 @@ import Form from 'react-bootstrap/Form';
 
 const SignUpPage = () => (
     <div>
-        <h3 className = "FormTitleContact" style={{color:'#2E4158', marginTop: '30px'}}>Register New User </h3>
+        <h2 className = "FormTitleContact" style={{color: '#01579b', marginTop: '30px'}}>Register New User </h2>
         <SignUpForm />
 
     </div>
