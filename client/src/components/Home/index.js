@@ -38,7 +38,8 @@ class Home extends Component {
             templateParams,
             'user_cTiJAySIfLMZmueqFFH7w'
         )
-        this.resetForm()
+            alert("Message Sent");
+            this.resetForm()
         }
 
         resetForm() {
