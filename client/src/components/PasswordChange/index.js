@@ -17,21 +17,26 @@ class PasswordChangeForm extends Component {
     onSubmit = event => {
         var flag = 0;
         const { passwordOne } = this.state;
-
-        this.props.firebase
-            .doPasswordUpdate(passwordOne)
-            .then(() => {
-                this.setState({ ...INITIAL_STATE });
-            })
-            .catch(error => {
-                this.setState({ error });
-                flag++;
-            })
-            .finally(() => {
-                if (flag === 0){
-                    alert("Password has successfully been changed")
-                }
-            });
+        const passwordTwo = this.state.passwordTwo;
+        if (passwordOne === passwordTwo) {
+            this.props.firebase
+                .doPasswordUpdate(passwordOne)
+                .then(() => {
+                    this.setState({...INITIAL_STATE});
+                })
+                .catch(error => {
+                    this.setState({error});
+                    flag++;
+                })
+                .finally(() => {
+                    if (flag === 0) {
+                        alert("Password has successfully been changed")
+                    }
+                });
+        }
+        else{
+            alert("Passwords do not match")
+        }
         event.preventDefault();
     };
     onChange = event => {
