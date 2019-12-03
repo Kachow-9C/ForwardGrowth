@@ -1,6 +1,6 @@
 module.exports = {
     firebase: {
-        REACT_APP_API_KEY: process.env.FB_API_KEY_1 + process.env.FB_API_KEY_2,
+        REACT_APP_API_KEY: "AIzaSyBJkh6JwI-Bv6HiGjIrNP4bgazlUEeAt3c",
         REACT_APP_AUTH_DOMAIN: process.env.FB_AUTH_DOMAIN,
         REACT_APP_DATABASE_URL: process.env.FB_DATABASE_URL,
         REACT_APP_PROJECT_ID: process.env.FB_PROJECT_ID,
