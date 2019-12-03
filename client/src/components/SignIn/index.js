@@ -76,7 +76,7 @@ class SignInFormBase extends Component {
                             </div>
                         
                             <div className = "FormField" style={{display: 'flex', justifyContent: 'center'}}></div>
-                                <button className = "FormField__Button mr-20" disabled={isInvalid} type="submit">
+                                <button className = "FormField__Button mr-20" style={{backgroundColor: '#4d9dc9', color: '#293A4E'}} disabled={isInvalid} type="submit">
                                     Sign In!
                                 </button>
                             {error && <p>{error.message}</p>}

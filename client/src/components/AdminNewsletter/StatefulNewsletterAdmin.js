@@ -38,7 +38,7 @@ class StatefulNewsletterAdmin extends Component{
                 <h2 className = "newsletterTitle"> Newsletter </h2>
                 {this.state.newsletters.map(newsletter => 
                     <div style={{display: 'flex', justifyContent: 'center' }}>
-                        <Card className = 'text-center' style={{width: '75rem',color: '#293A4E', backgroundColor: '#5BD5C0', marginBottom: '50px'}}>
+                        <Card className = 'text-center' style={{width: '75rem',backgroundColor: '#293A4E', color: 'whitesmoke', marginBottom: '50px'}}>
                             <Card.Body>
                                 <Card.Title>{newsletter.title}</Card.Title>
                                 <Card.Text>
@@ -49,7 +49,7 @@ class StatefulNewsletterAdmin extends Component{
                                 <i>Date: {newsletter.created_at}</i>
                                 </Card.Text>
                                 <Card.Text className = 'text-right'>
-                                <Button variant='danger' size="lg" href='/adminnewsletter' onClick={this.deletePost.bind(this, newsletter._id)}>
+                                <Button variant='danger' size="lg" href='/adminnewsletter'  onClick={this.deletePost.bind(this, newsletter._id)}>
                                     Delete
                                  </Button>
                                 </Card.Text>

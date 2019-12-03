@@ -63,7 +63,7 @@ class PasswordForgetFormBase extends Component {
                     type="text"
                 />
                 </Form.Group>
-                <Button variant='info'  style={{backgroundColor: '#5BD5C0', color: '#293A4E', marginBottom: '20px'}} size="lg" type="submit">
+                <Button variant='info'  style={{backgroundColor: '#293A4E', color: '#293A4E'}} size="lg" type="submit">
                         Reset My Password
                     </Button>
                 {error && <p>{error.message}</p>}
