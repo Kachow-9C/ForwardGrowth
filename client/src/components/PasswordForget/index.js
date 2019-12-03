@@ -15,20 +15,33 @@ const INITIAL_STATE = {
     error: null,
 };
 class PasswordForgetFormBase extends Component {
+
     constructor(props) {
         super(props);
         this.state = { ...INITIAL_STATE };
     }
     onSubmit = event => {
+        var flag = 0;
         const { email } = this.state;
         this.props.firebase
             .doPasswordReset(email)
             .then(() => {
                 this.setState({ ...INITIAL_STATE });
             })
+
             .catch(error => {
-                this.setState({ error });
+                this.setState({ ...INITIAL_STATE });
+                alert("This email does match a Forward Growth account")
+                flag++;
+
+            })
+            .finally(() => {
+                if (flag === 0)
+                    alert("Forgot Password Email Sent! Please Check Your Inbox")
+
             });
+
+
         event.preventDefault();
     };
     onChange = event => {
