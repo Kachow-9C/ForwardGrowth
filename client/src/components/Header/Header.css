@@ -1,13 +1,13 @@
+/* Header bar at the top of the page. Not the same as Nav */
 header {
 	background:   #2E4158;
-	/* margin-bottom: 1rem; */
 	font-size: 1.5rem;
     color: #f9f9f9;
 	text-align: left;
 	font-family: Verdana, Geneva, Tahoma, sans-serif;
-	/* margin-top: 10px; */
 }
 
+/* Logo on the left side of the company name */
 img {
 	padding: 10px;
 	width: 50px;
