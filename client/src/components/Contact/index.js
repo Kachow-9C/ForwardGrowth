@@ -24,6 +24,7 @@ render() {
               <Container>
                 <Row className = "FormRow" >
 
+                  {/* Team member description. Can add more team members by adding additional Rows*/}
                   <Col className = "Contact_Description" sm={4}>
                     <img alt="Quanisha Headshot" src={Quanisha} style={{width:'60%', borderWidth: '1', borderRadius: '150', overflow: 'hidden', alt: "Quanisha Headshot"}}></img>
                     <Col style={{fontWeight: 'bold'}}> Quanisha Madison</Col>
@@ -40,11 +41,13 @@ render() {
                     </a>
                   </Col>
                   <Col>
+                  {/* FIXME: Currently links to Facebook's home page, not the client page. Client should update this later */}
                     <a href = "https://facebook.com" target="_blank">
                     <img alt="Facebook icon" src={Facebook} style ={{width: '90px', height:'auto'}}></img>
                     </a>
                   </Col>
                   <Col>
+                  {/* FIXME: Currently links to clients personal Twitter. Client should change to company twitter once created */}
                     <a href="https://twitter.com/quanishamadison" target="_blank">
                     <img alt="Twitter Icon" src={Twitter} style ={{width: '90px', height:'auto'}}></img>
                     </a>
