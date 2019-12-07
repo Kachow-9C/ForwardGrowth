@@ -1,10 +1,7 @@
-
 import React, { Component } from 'react';
 import '../Contact/contact.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-// import * as emailjs from 'emailjs-com';
 import { Container, Row, Col} from 'react-bootstrap';
-// import { FormGroup, Input } from 'reactstrap';
 import Quanisha from '../Contact/quanisha.png';
 import Email from '../Contact/email_logo.png';
 import Facebook from '../Contact/facebook_logo.png';

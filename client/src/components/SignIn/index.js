@@ -1,3 +1,6 @@
+// Sign in Page  (For admin only): 
+// Includes email/username and password fields, submit button, and link to 'forgot password'
+
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 import { compose } from 'recompose';
@@ -9,6 +12,7 @@ import Container from 'react-bootstrap/Form';
 
 
 const SignInPage = () => (
+    // Sign in form component. Can edit the form in SignInForm.js
     <div>
         <SignInForm />
     </div>
