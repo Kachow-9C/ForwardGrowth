@@ -1,3 +1,6 @@
+// Home page: 
+// Includes app name, description, carousel of pictures, blurb, links to apple/play store, and feedback form
+
 import React, {Component} from 'react';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
@@ -13,7 +16,6 @@ import { Container, Form, Button } from 'react-bootstrap';
 import { FormGroup, Input } from 'reactstrap';
 import './Home.css';
 
-// const Home = () => (
 class Home extends Component {
     state = {
         name: '',
@@ -22,6 +24,7 @@ class Home extends Component {
         message: '',
         }
 
+        // Submit feedback form
         handleSubmit(e) {
             e.preventDefault()
             const { name, email, subject, message } = this.state
@@ -31,17 +34,17 @@ class Home extends Component {
               subject: subject,
               message_html: message,
             }
-        // MAKE SURE YOU HAVE THE CORRECT TEMPLATE ID AND USER ID
-        emailjs.send(
+            // KEEP TEMPLATE AND USER ID SECURE
+            emailjs.send(
             'gmail',
-            'template_78l3DL6t',
+            '<TEMPLATE_ID>',
             templateParams,
-            'user_cTiJAySIfLMZmueqFFH7w'
+            '<USER_ID>'
         )
             alert("Message Sent");
             this.resetForm()
         }
-
+        // reset form to blanks after you hit submit
         resetForm() {
         this.setState({
             name: '',
@@ -59,13 +62,10 @@ class Home extends Component {
         return (
             <React.Fragment>
                 <div>
-                    {/* <div className = 'intro'> */}
-                        <p className = 'heading'> Welcome to Backpack Adventures</p>
-
+                    <p className = 'heading'> Welcome to Backpack Adventures</p>
                     <p className='summary'>
                         A gaming app that  will teach about the fundamentals of budgeting and traveling!
                     </p>
-                    {/* </div> */}
                 </div>
 
                 <div className='carousel'>
@@ -111,12 +111,14 @@ class Home extends Component {
 
             <hr/>
 
+            {/* Feedback form starts */}
             <div className = "App__Form__Full">
 
             <Container>
                 <h6 className = "FormTitleContact"> Let us know what you think! </h6>
                 <Form onSubmit = {this.handleSubmit.bind(this)}>
 
+                    {/* Name information */}
                     <FormGroup controlId="formBasicName">
                         <Form.Label> Full Name </Form.Label>
                         <Input
@@ -129,6 +131,7 @@ class Home extends Component {
                         />
                     </FormGroup>
 
+                        {/* Email information */}
                         <FormGroup controlId="formBasicEmail">
                         <Form.Label> Email </Form.Label>
                             <Input
@@ -140,8 +143,8 @@ class Home extends Component {
                             />
                         </FormGroup>
 
-
-                    <FormGroup controlId="formBasicName">
+                    {/* Subject Information */}
+                    <FormGroup controlId="formBasicSubject">
                     <Form.Label> Subject </Form.Label>
                         <Input
                         type="text"
@@ -153,6 +156,7 @@ class Home extends Component {
                         />
                     </FormGroup>
 
+                    {/* Message Information  */}
                     <FormGroup controlId="formBasicMessage">
                     <Form.Label> Message </Form.Label>
                     <Input
@@ -166,6 +170,7 @@ class Home extends Component {
                     />
                     </FormGroup>
 
+                    {/* Submit button, after clicked an alert should pop up confirming submission */}
                     <Button variant="info" style={{backgroundColor: '#4d9dc9', color: '#293A4E'}}size="lg" block type="submit">
                     Submit
                     </Button>
