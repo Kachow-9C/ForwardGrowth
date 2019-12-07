@@ -1,3 +1,6 @@
+// Navigation Bar: 
+// Includes routes to the rest of the pages. Is seen on every page.
+
 import React  from 'react';
 import { Link } from 'react-router-dom';
 import SignOutButton from '../SignOut';
@@ -7,6 +10,7 @@ import  './Navigation.css'
 
 
 const Navigation = () => (
+    // Part of the styling for the nav bar is found here: 
     <div style={{marginTop: '15px', backgroundColor: '#2E4158', marginRight: '20px'}}>
         <AuthUserContext.Consumer>
             {authUser =>
