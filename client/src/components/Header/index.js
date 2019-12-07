@@ -1,3 +1,6 @@
+// Header: 
+// Includes Title and Logo  
+
 import React from 'react';
 import './Header.css';
 import logo from '../../assets/backpackLogo.png';
