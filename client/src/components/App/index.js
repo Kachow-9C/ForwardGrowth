@@ -16,6 +16,12 @@ import AdminNewsletter from '../AdminNewsletter'
 
 import { Row, Col} from 'react-bootstrap';
 
+/*******
+ *
+ * Main App component. This is the highest order component that gets sent to the main index.js
+ *
+ */
+
 const App = () => (
     <Router>
         <div>

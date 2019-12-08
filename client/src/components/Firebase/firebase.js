@@ -2,7 +2,7 @@ import app from 'firebase/app';
 import 'firebase/auth';
 
 var rawConfig = require('../../config');
-
+//Config variables defined in config file found in src
 const config = {
     apiKey: rawConfig.firebase.REACT_APP_API_KEY,
     authDomain: rawConfig.firebase.REACT_APP_AUTH_DOMAIN,

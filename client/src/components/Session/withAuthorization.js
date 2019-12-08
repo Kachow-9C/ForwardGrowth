@@ -4,6 +4,12 @@ import { compose } from 'recompose';
 import AuthUserContext from './context';
 import { withFirebase } from '../Firebase';
 import * as ROUTES from '../../constants/routes';
+
+
+//Explanation and walk through of components can be found at:
+//https://www.robinwieruch.de/complete-firebase-authentication-react-tutorial
+//Code in this file was borrowed from this source
+
 const withAuthorization = condition => Component => {
     class WithAuthorization extends React.Component {
         componentDidMount() {

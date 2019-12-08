@@ -5,6 +5,13 @@ import * as ROUTES from '../../constants/routes';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container'
+
+
+//Explanation and walk through of components can be found at:
+//https://www.robinwieruch.de/complete-firebase-authentication-react-tutorial
+//Code in this file was borrowed from this source
+//Modifications were made to better handle failure cases
+
 const PasswordForgetPage = () => (
     <div>
         <PasswordForgetForm />

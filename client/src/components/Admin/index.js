@@ -8,6 +8,7 @@ import * as ROUTES from "../../constants/routes";
 
 
 const AdminPage = () => (
+    /*authUser and AuthUserContext restrict access to not authorized users*/
     <AuthUserContext.Consumer>
         {authUser => (
             <div>
@@ -30,4 +31,5 @@ const AdminPage = () => (
 
 );
 const condition = authUser => !!authUser;
+/*withAuthorization with condition  to test is user is logged in*/
 export default withAuthorization(condition)(AdminPage);

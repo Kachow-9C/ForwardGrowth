@@ -3,7 +3,9 @@ import { Link } from 'react-router-dom';
 import * as ROUTES from "../../constants/routes";
 import {AuthUserContext} from "../Session";
 
-
+//Footer is dependant on if user is logged in or not.
+// If they are not signed in it displays the sign in link.
+//If the user is signed in it just shows the standard text.
 const Footer = () => (
     <div>
         <AuthUserContext.Consumer>

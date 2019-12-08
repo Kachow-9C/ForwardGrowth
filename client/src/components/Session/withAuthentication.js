@@ -5,6 +5,12 @@ import React from 'react';
 import AuthUserContext from './context';
 import { withFirebase } from '../Firebase';
 
+//Explanation and walk through of components can be found at:
+//https://www.robinwieruch.de/complete-firebase-authentication-react-tutorial
+//Code in this file was borrowed from this source
+
+
+
 const withAuthentication = Component => {
     class WithAuthentication extends React.Component {
         constructor(props) {

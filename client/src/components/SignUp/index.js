@@ -10,7 +10,7 @@ import Form from 'react-bootstrap/Form';
 
 
 
-
+//Sign up only accessible when logged in
 const SignUpPage = () => (
     <div>
         <h2 className = "FormTitleContact" style={{color: '#01579b', marginTop: '30px'}}>Register New User </h2>
@@ -68,6 +68,7 @@ class SignUpFormBase extends Component {
             email === '' ||
             username === '';
 
+        //authUser function and AuthUserContext used to restrict access to logged in users only
         return (
             <Container>
             <AuthUserContext.Consumer>
