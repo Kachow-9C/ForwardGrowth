@@ -72,21 +72,21 @@ If deploying to heroku this does not need to be run since it is handled by the h
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
 ## Borrowed Code & APIs
-###Google Firebase 
+### Google Firebase 
 Google's Firebase API is used for authentication in this application. The following tutorial was followed to implement Firebase functionality:
 https://www.robinwieruch.de/complete-firebase-authentication-react-tutorial
 
 Code from this tutorial was borrowed in the implementation of Firebase authentication. The file structure of the application is also based of this tutorial.
 
 Modifications were made to secure different pages as outlined in the tutorial and to better handle error cases.
-###Email JS
+### Email JS
 Email JS was utilized in the contact form located on the home page. The API must be connected to a user account created on the company's website:
 https://www.emailjs.com/
 
-###React Responsive Carousel 
+### React Responsive Carousel 
 "react-responsive-carousel" was added from npm install and is used for the cycling of pictures on the home page of the application. 
 
-##Features & Screenshots
+## Features & Screenshots
 
 - #### Responsive Carousel of App Screenshots
 ![Home Page](readme_screenshots/front_page.jpg?raw=true)
