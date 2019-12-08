@@ -1,17 +1,23 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-This project contains an example project board meant to showcase how one can be used. The issues posted to it are not real issues.
 
-#### _**IMPORTANT NOTE**_ - 
-This project does not have a mongoDB connection setup. Setup the connection based on the environments below.
-- local development: create a config file (make sure to name it config.js) in the config folder, which exports your db.uri connection. An example is provided, config/config.example.js. This file will be ignored by git so your db credentials will be kept safe when the app is deployed.
-- production: Since the config file is not pushed when you deploy your app, you must specifiy your db uri in heorku. Set the uri in heroku as specified in [this](https://devcenter.heroku.com/articles/config-vars) resource. Make sure you name the environement variable "DB_URI".
+##Heroku Deployment 
+This project has been deployed via Heroku at the following address:
 
-## Getting Started
-This repository aims to assist you in beginning work on a MERN stack application with a solid file structure as a foundation. To get started make a copy of this template repo for your project teams.
+http://forward-growth.herokuapp.com/
+
+Deployment corresponds to the [deployment branch](https://github.com/Kachow-9C/ForwardGrowth/tree/Deployment)
+
+## On Machine Deployment
 
 Since this project will hold both the client application and the server application there will be node modules in two different places. First run `npm install` from the root. After this you will run `npm run-script install-all` from the root. From now on run this command anytime you want to install all modules again. This is a script we have defined in package.json .
 
 This app can be deployed directly to heroku since there is a script defined in package.json which will automatically handle building and deploying the app. For more information on deploying to heroku reference the extra resources at the bottom of this file. 
+
+**The configuration file must be placed in two places in order for the application to operate properly:** 
+
+- ##### **Place the first copy in /client/src**
+
+- ##### **Place the second copy in /server/config**
 
 ## File structure
 #### `client` - Holds the client application
@@ -19,12 +25,13 @@ This app can be deployed directly to heroku since there is a script defined in p
 - #### `src`
     - #### `assets` - This folder holds assets such as images, docs, and fonts
     - #### `components` - This folder holds all of the different components that will make up our views
+    - #### `constants` -  This folder holds defined route constants and role constants used throughout the application    
     - #### `views` - These represent a unique page on the website i.e. Home or About. These are still normal react components.
-    - #### `App.js` - This is what renders all of our browser routes and different views
+    - #### `Config.js` - This file is not stored on the repo and must be manually placed before deployment. Contains API keys for firebase authentication.
     - #### `index.js` - This is what renders the react app by rendering App.js, should not change
 - #### `package.json` - Defines npm behaviors and packages for the client
 #### `server` - Holds the server application
-- #### `config` - This holds our configuration files, like mongoDB uri
+- #### `config` - This holds the mongoDB uri and must be added manually, it is not in the github repo.
 - #### `controllers` - These hold all of the callback functions that each route will call
 - #### `models` - This holds all of our data models
 - #### `routes` - This holds all of our HTTP to URL path associations for each unique url
@@ -63,6 +70,51 @@ It correctly bundles React in production mode and optimizes the build for the be
 If deploying to heroku this does not need to be run since it is handled by the heroku-postbuild script<br>
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+## Borrowed Code & APIs
+###Google Firebase 
+Google's Firebase API is used for authentication in this application. The following tutorial was followed to implement Firebase functionality:
+https://www.robinwieruch.de/complete-firebase-authentication-react-tutorial
+
+Code from this tutorial was borrowed in the implementation of Firebase authentication. The file structure of the application is also based of this tutorial.
+
+Modifications were made to secure different pages as outlined in the tutorial and to better handle error cases.
+###Email JS
+Email JS was utilized in the contact form located on the home page. The API must be connected to a user account created on the company's website:
+https://www.emailjs.com/
+
+###React Responsive Carousel 
+"react-responsive-carousel" was added from npm install and is used for the cycling of pictures on the home page of the application. 
+
+##Features & Screenshots
+
+- #### Responsive Carousel of App Screenshots
+![Home Page](readme_screenshots/front_page.jpg?raw=true)
+
+- #### Contact Form via Email JS
+![Home Page](readme_screenshots/homepage_contact_form.jpg?raw=true)
+
+- #### Contact Page with Links to Client's Social Media
+![Contact](readme_screenshots/Meet_the_team.jpg?raw=true)
+
+- #### Newsletter with Updates on Gaming App
+   
+    ![Newsletter](readme_screenshots/newsletter.jpg?raw=true) 
+    
+     When logged in, Admins also have the ability to delete posts past newsletter posts.
+     
+    ![Newsletter Admin](readme_screenshots/newsletter_admin.jpg?raw=true)   
+    
+- #### Admin Console 
+    The admin console grants administrators the ability to post to the newsletter, change their password and sign up new administrators.
+    ![Admin Console](readme_screenshots/Admin1.jpg?raw=true)   
+    ![Admin Console](readme_screenshots/Admin2.jpg?raw=true)   
+
+    
+- #### New User Sign Up
+    Administrators have the ability to sign up new administrators via the Admin Console.
+    ![Register](readme_screenshots/register.jpg?raw=true)   
+
 
 ## Learn More
 
