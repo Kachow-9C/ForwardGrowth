@@ -1,6 +1,6 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-##Heroku Deployment 
+## Heroku Deployment 
 This project has been deployed via Heroku at the following address:
 
 http://forward-growth.herokuapp.com/
