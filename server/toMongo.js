@@ -1,5 +1,7 @@
 'use strict'
 
+// This is the code to initialize the MongoDB server
+
 var fs = require('fs'),
     mongoose = require('mongoose'),
     Newsletter = require('./models/changelog.server.model.js'),

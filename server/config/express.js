@@ -27,11 +27,13 @@ module.exports.init = () => {
     // body parsing middleware
     app.use(bodyParser.json());
 
-    // add a router
+    // route for GET
     app.get('/api/newsletters', newsletters.list);
 
+    // route for POST
     app.post('/api/newsletters/new', newsletters.create);
 
+    // route for DELETE
     app.delete('/api/newsletters/delete/:id', newsletters.delete);
 
     if (process.env.NODE_ENV === 'production') {

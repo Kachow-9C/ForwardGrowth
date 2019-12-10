@@ -3,6 +3,8 @@ const newsletters = require('../controllers/newsletter.server.controller.js'),
     router = express.Router()
 
 let newletterSchema = require('../models/changelog.server.model')
+
+// Router used for middleware
 router.route('/')
   .get(newsletters.list)
   .post(newsletters.create)

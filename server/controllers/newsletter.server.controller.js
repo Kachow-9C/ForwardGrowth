@@ -1,6 +1,6 @@
 var Newsletter = require('../models/changelog.server.model.js');
 
-
+// CREATE function
 exports.create = function(req, res) {
     var newsletter = new Newsletter(req.body);
     console.log(newsletter)
@@ -15,6 +15,8 @@ exports.create = function(req, res) {
     })
 }
 
+
+// DELETE FUNCTION
 exports.delete = function(req, res){
 
     console.log(req.params.id)
@@ -29,6 +31,7 @@ exports.delete = function(req, res){
     })
 }
 
+// LIST function
 exports.list = function(req, res){
     Newsletter.find(function(err, data){
         if(err){
